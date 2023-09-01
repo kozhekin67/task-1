@@ -1,0 +1,675 @@
+.main {
+    background-color: #F9F7F4;
+}
+.choosing-tour {
+    padding-top: 135px;
+    color: #1B1F2B;
+}
+
+.menu-choosing-tour ul{
+    display: flex; 
+    justify-content:space-between;
+    width: 700px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tour-category {
+    color: #1B1F2B;
+    font-weight: 700;
+    font-size: 23px;
+    list-style-type: none;
+}
+
+li .tour-category:focus {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 122%;
+    color: #EFA501;
+    border-bottom: 2px solid #EFA501;
+}
+
+.category-images {
+    margin-top: 107px;
+    width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.card-tour{
+    position:relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 50px;
+    flex-wrap: wrap;
+}
+.card-tour:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 50px;
+}
+    
+ .card-tour img{
+    display:block;
+    width: 370px;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out;
+}
+
+.card-tour .tour-1024, .card-tour .tour-360{
+    display:none;
+    width: 370px;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out;
+}
+
+.card-tour h3 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    width: 230px;
+    z-index: 1;
+}
+
+.cost {
+    position: absolute;
+    top: 152px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    z-index: 1;
+    left: 50px;
+}
+
+.in-detail {
+    font-weight: 700;
+    font-size: 23px;
+    color: #FFFFFF;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    bottom: 50px;
+    left: 50px;
+    align-items: center;
+}
+
+.in-detail button {
+    color: #FFFFFF;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    margin-bottom: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 122%;
+}
+
+.in-detail button img {
+    display: inline-block;
+    margin-left: 12px;
+    width: 22px;
+}
+
+.questionnaire {
+    padding-top: 105px;
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name-questionnaire {
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name-questionnaire h2 {
+    text-align: center;
+}
+
+.name-questionnaire p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    color: #A6A6A6;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.questionnaire form {
+    margin-top: 100px;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.data-field {
+    width: 500px;
+    color: #1B1F2B;
+    font-size: 20px;
+    margin-bottom: 33px;
+}
+.data-field input {
+    margin-top: 8px;
+    padding: 20px;
+    width: 100%;
+    background: #F9F7F4;
+    border: 1px solid #F4F0E9;
+    color:#1B1F2B;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 142%;  
+}
+
+.data-field input::placeholder{
+    color: #A6A6A6;
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 142%;
+}
+
+.dropdown_button {
+    appearance: none;
+    margin-top: 8px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    border: 1px solid #F4F0E9;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 142%; 
+    color: #A6A6A6;
+    background: url("/Users/macbook/Downloads/task №1/img/Rectangle34.svg") no-repeat 95% 55% #F9F7F4;
+    cursor: pointer;
+}
+
+.dropdown_button--active {
+    color: #1B1F2B;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown_list {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    background: #F9F7F4;
+    color: #1B1F2B;
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+    border: 1px solid #F4F0E9;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.dropdown_list--visible {
+    display: block;
+    z-index: 1;
+}
+
+.dropdown_list-item {
+    border: 1px solid black;
+    cursor: pointer;
+    border-bottom: 1px solid #F4F0E9;
+    border: 1px solid #F4F0E9;
+    padding: 20px;
+    
+}
+
+
+.data-field-comment {
+    color: #1B1F2B;
+    width: 100%;
+    font-size: 20px;
+    line-height: 142%; 
+}
+
+.data-field-comment textarea {
+    resize: none;
+    width: 100%;
+    height: 152px;
+    margin-top: 8px;
+    background: #F9F7F4;
+    border: 1px solid #F4F0E9;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 142%;
+    padding: 1%;
+}
+
+.radiobuttons {
+    font-size: 20px;
+    line-height: 142%; 
+    width: 100%;
+    margin-top: 30px;
+}
+
+.radiobutton {
+    margin-top: 7px;
+    display: flex;
+}
+
+.radio {
+    display: flex;
+    justify-content:space-between
+}
+
+.radio label {
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+
+.radio:not(:first-child){
+    margin-left: 31px;
+}
+.agreements {
+    margin-top: 34px;
+    font-size: 20px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-left: 11px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radiobutton label::before {
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #1B1F2B;
+    border-radius: 50%;
+    margin-right: 11px;
+}
+
+input[type="radio"]:checked + label::before {
+    background-image: url("/Users/macbook/Downloads/task №1/img/Ellipse2.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.agreements label::before {
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 19px;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #1B1F2B;
+    border-radius: 5px;
+}
+
+.agreements label {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: -0.01em;
+    color: #A6A6A6;
+}
+
+.agreements label a{
+    color: #1B1F2B;
+    padding: 0.25em;
+}
+input[type="checkbox"]:checked + label::before {
+    background-image: url("/Users/macbook/Downloads/task №1/img/Rectangle36Strok.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.questionnaire-buttons {
+    display: flex;
+    margin-top: 30px;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.questionnaire-buttons input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 235px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 142%;
+}
+
+.button_search input {
+    cursor: pointer;
+    background-color: #286562;
+    color: #FFFFFF;
+}
+
+.button_reset input {
+    cursor: pointer;
+    background-color: #E0F0E5;
+    color: #286562;
+}
+
+.reviews {
+    padding-top: 135px;
+}
+
+h2 + p{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 142%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 418px;
+    color: #A6A6A6;
+}
+
+.containers-reviews{
+    display: flex;
+    width: 1170px;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review {
+    width: 570px;
+    padding: 40px;
+    background: #F4F0E9;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 122%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 145px;
+}
+
+.user img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.user-name {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-name p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: -0.01em;
+    color: #A6A6A6;
+}
+
+.travel-photos h2 {
+    margin-top: 135px;
+}
+
+.container-travel-photos {
+    width: 1860px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first-row-photos, .second-row-photos, .third-row-photos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-travel-photos img{
+    border-radius: 50px;
+}
+
+.first-row-photos div, .third-row-photos div{
+    width: 23.8%;
+    height: 300px;
+}
+
+.second-row-photos, .third-row-photos {
+    margin-top: 30px;
+}
+
+.second-row-photos div{
+    width: 18.8%;
+    height: 301px;
+}
+  
+.first-row-photos div img, .second-row-photos div img, .third-row-photos div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.second-row-photos div:last-child img {
+    object-fit: fill;
+}
+
+.travel-stories {
+    padding-top: 135px;
+}   
+
+.travel-photo1024 {
+    display: none;
+}
+
+.travel-stories-image {
+    margin-top: 98px;
+    border-radius: 50px;
+}
+
+.storie-image {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1170px;
+    height: 567px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.storie-image:after {
+    box-sizing: border-box;
+    content:'';
+    position:absolute;
+    left:0%; top:0%;
+    width:100%; height: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%);
+    border-radius: 50px;
+}   
+
+.storie-image:not(:first-child) {
+    margin-top: 50px;
+}
+
+.footer-foto-1920{
+    display: block;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.footer-foto-1024, .footer-foto-360{
+    display: none;
+}
+
+.storie-image h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+    color: #FFFFFF;
+    margin: 60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.advantages{
+    width: 555px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    position: absolute;
+    z-index: 1;
+    color: #FFFFFF;
+    margin: 140px 60px 60px 60px; 
+}
+
+.advantages li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.advantages li::before {
+    content:"·";
+    font-size: 30px;
+    vertical-align:text-top;
+    line-height:20px;
+    padding: 0.35em;
+}
+
+.storie-image-bottom {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    bottom: 0px;
+    margin: auto;
+    width: 100%;
+    padding: 0px 60px 60px 60px;
+}
+.storie-image-bottom button {
+    color: #FFFFFF;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    margin-bottom: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 122%;
+}
+
+.storie-image-bottom button img {
+    display: inline-block;
+    margin-left: 12px;
+    width: 22px;
+}
+
+.links-social-networks {
+    display: flex;
+}
+
+.links-social-networks a {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    color: #FFFFFF;
+    margin-left: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.Email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 770px;
+}
+
+.Email div{
+    margin-left: 30px;
+}
+
+.Email img {
+    width: 370px;
+    border-radius: 50px;
+}
+
+.Email h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+}
+
+.Email p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    color: #A6A6A6;
+}
+
+.Email p a{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    color: #1B1F2B;
+}

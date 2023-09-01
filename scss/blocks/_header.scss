@@ -1,0 +1,106 @@
+.data-field label {
+    display: block;
+}
+
+.header-container {
+    background-image: url("/Users/macbook/Downloads/task №1/img/header-img.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.menu {
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    display: flex; 
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+    padding-left: 19.6%;
+    padding-right: 19.6%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.menu_scroll {
+    background: rgba(243, 239, 232, 0.6);
+    backdrop-filter: blur(27px);
+    color: #1B1F2B;
+    position:fixed;
+    z-index: 2;
+    align-items: center;
+    padding-left: 376px;
+    padding-right: 376px;
+    width: 100%;
+    top:0;
+}
+
+.header-logo {
+    fill: white;
+}
+
+.header-logo__scrool  {
+    fill: #1B1F2B;
+}
+
+.logo-nav {
+    display: flex; 
+    justify-content:space-between;
+    width: 468px;
+}
+
+.nav-link, .telephone{
+    color: white;
+}
+
+.telephone__scrool {
+    color: black;
+}
+
+.title {
+    width: 768px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-title {
+    padding-top: 210px;
+    font-size: 96px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+}
+.introduction {
+    margin-top: 50px;
+    line-height: 142%;
+    font-size: 20px;
+    width: 562px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.findtour {
+    margin-top: 46px;
+    padding-bottom: 116px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.findtour input {
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 118px;
+    height: 38px;
+    border: none;
+}

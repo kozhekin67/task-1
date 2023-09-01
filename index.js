@@ -12,7 +12,6 @@ document.querySelectorAll('.dropdown_list-item').forEach(function(listItem) {
 });
 
 document.addEventListener('click', function (event){
-    console.log('Document Click');
     if (event.target !== document.querySelector('.dropdown_button')) {
         document.querySelector('.dropdown_list').classList.remove('dropdown_list--visible');
     }
@@ -23,6 +22,7 @@ window.onscroll = function showMenu () {
     let links = document.querySelectorAll('.nav-link');
     let linksHover = document.querySelectorAll('.nav-link');
     let logo = document.querySelector('.header-logo');
+    let telephone = document.querySelector('.telephone');
 
 
     if (window.pageYOffset > 450) {
@@ -30,12 +30,14 @@ window.onscroll = function showMenu () {
         links.forEach((link)=>link.style.color = '#1B1F2B');
         linksHover.forEach((l)=>l.style.borderBottomColor = '#1B1F2B');
         logo.classList.add('header-logo__scrool');
+        telephone.classList.add('telephone__scrool');
     }
     else {
         menu.classList.remove('menu_scroll');
         links.forEach((link)=>link.style.color = 'white');
         linksHover.forEach((linksHover)=>linksHover.style.borderBottomColor = 'white');
         logo.classList.remove('header-logo__scrool');
+        telephone.classList.remove('telephone__scrool');
     }
     
 }

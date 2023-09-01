@@ -1,0 +1,612 @@
+@media (max-width: 1023px) {
+    .noHover{
+        pointer-events: none;
+    }
+   
+    h2 {
+        font-size: 34px;
+        line-height: 112%;
+        letter-spacing: 0.02em;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+    }
+
+    .title{
+        max-width: 550px;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .introduction {
+        max-width: 380px;
+        width: 86.11%;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .findtour {
+        margin-top: 40px;
+        padding-bottom: 52px;
+    }
+
+    .findtour input {
+        font-size: 16px;
+        width: 114px;
+        height: 33px;   
+    }
+
+    .header-title{
+        font-size: 34px;
+        line-height: 112%;
+        letter-spacing: 0.02em;
+        padding-top: 140px;
+    }
+
+    .header-container{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("image.png"), url("/Users/macbook/Downloads/task №1/img/header-img.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    .menu {
+        padding-left: 5.6%;
+        padding-right: 5.6%;
+        font-size: 16px;
+    }
+
+    .menu_scroll {
+        z-index: 2;
+        width: 100%;
+    }
+
+    .header-logo {
+        width: 133px;
+    }
+
+    .logo__360 {
+        display: none;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .choosing-tour {
+        padding-top: 75px;
+    }
+
+    .menu-choosing-tour ul{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content:center;
+        width: 100%;
+        margin-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 10px;
+        height: auto;
+        
+    }
+
+    .menu-choosing-tour ul li{
+        line-height: 142%;
+    }
+
+    .tour-category {
+        font-size: 16px;
+    }
+
+    li .tour-category:focus {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 142%;
+    }
+
+    .category-images {
+        margin-top: 50px;
+        width: 88.33%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .category-images .card-tour{
+        position:relative;
+        margin-bottom: 0px;
+        overflow: hidden;
+        border-radius: 20px;
+        width: 318px;
+        height: 318px; 
+    }
+
+    .card-tour img {
+        display: none;
+    }
+
+    .card-tour .tour-360 {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .card-tour:after {
+        content:'';
+        position:absolute;
+        left:0; top:0;
+        width:100%; height:100%;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+        border-radius: 20px;
+    }
+
+    .card-tour h3 {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        top: 25px;
+        left: 25px;
+        right: 25px;
+        width: 100%;
+    }
+    
+    .cost {
+        left: 25px;
+        top: 66px;
+        font-size: 16px;
+    }
+
+    .in-detail {
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .in-detail button{
+        font-size: 16px;
+        line-height: 142%;
+    }
+
+    .questionnaire {
+        padding-top: 75px;
+        width: 88.33%;
+    }
+
+    .name-questionnaire h2 {
+        text-align: center;
+    }
+    
+    .name-questionnaire p{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .questionnaire form {
+        margin-top: 40px;
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .data-field {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 4px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .data-field input {
+        padding: 10px;
+        height: 43px;
+    }
+
+    .dropdown_button {
+        padding-top: 11.5px;
+        padding-bottom: 11.5px;
+        padding-left: 10px;
+        height: 46px;
+    }
+
+    .dropdown_list-item {
+        padding-top: 11.5px;
+        padding-bottom: 11.5px;
+        padding-left: 10px;
+    }
+
+    .data-field input::placeholder, .dropdown_button{
+        font-size: 16px;
+    }
+
+    .data-field .dropdown{
+        font-size: 16px;
+        line-height: 142%;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    .data-field-comment {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+
+    .data-field-comment textarea {
+        height: 132px;
+    }
+
+    .radiobuttons {
+        font-size: 16px;
+        margin-top: 22px;
+    }
+
+    .radiobutton {
+        margin-top: 7px;
+        display: flex;
+    }
+
+    .radiobutton label::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    input[type="radio"]:checked + label::before {
+        background-image: url("/Users/macbook/Downloads/task №1/img/Ellipse-2-360.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    input[type="checkbox"]:checked + label::before {
+        background-image: url("/Users/macbook/Downloads/task №1/img/Rectangle-36-360.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .agreements {
+        margin-top: 29px;
+        display: flex;
+    }
+
+    .agreements label::before {
+        content: "";
+        min-width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        margin-bottom: auto;
+        margin-right: 10px;
+    }
+
+    .agreements label {
+        font-size: 16px;
+        letter-spacing: 0em;
+    }
+
+    .name-questionnaire, .name-questionnaire p{
+        width: 100%;
+    }
+
+    .questionnaire-buttons {
+        margin-bottom: 10px;
+        margin-top: 30px;
+        width: 278px;
+        flex-wrap: wrap;
+    }
+
+    .questionnaire-buttons input {
+        padding-top: 12;
+        padding-bottom: 12px;
+        width: 133px;
+        font-size: 16px;
+        line-height: 142%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .button_search {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .reviews{
+        padding-top: 75px;
+    }
+
+    .reviews p {
+        margin-top: 20px;
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .reviews-name p {
+        max-width: 380px;
+    }
+
+    .containers-reviews{
+        width: 88.33%;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .review {
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+        padding-right: 0px;
+        border-radius: 20px;
+        font-size: 16px;
+        line-height: 144%;
+    }
+
+    .user {
+        height: 115px;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .user-name {
+        height: 59px;
+    }
+
+    .user-name p {
+        margin-top: 0px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .travel-photos h2 {
+        margin-top: 75px;
+    }
+
+    .travel-photos p {
+        margin-top: 20px;
+        font-size: 16px;
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .container-travel-photos {
+        margin-top: 50px;
+        width: 88.33%;
+        max-width: 550px;
+    }
+
+    .first-row-photos div:nth-child(2), .third-row-photos div:nth-child(4), .second-row-photos div:nth-child(3) {
+        display: none;
+    }
+
+    .first-row-photos div:nth-child(3), .third-row-photos div:nth-child(3), .second-row-photos div:nth-child(2) {
+        display: none;
+    }
+
+    .first-row-photos div{
+        width: 47.17%;
+    }
+
+    .second-row-photos div:nth-child(5) .travel-photo1024 {
+        display: block;
+        object-fit:cover;
+    }
+
+    .first-row-photos div:not(:nth-child(3)) img {
+        object-fit:fill;
+    }
+
+    .third-row-photos div {
+        width: 48.5%;
+    }
+
+    .first-row-photos div, .third-row-photos div{
+        max-width: 315px;
+        height: 110px;
+    }
+
+    .travel-photo1920 {
+        display: none;
+    }
+
+    .second-row-photos div{
+        width: 31.24%;
+        height: 110px;
+        max-width: 300px;
+    }
+
+    .first-row-photos div img, .third-row-photos div img, .second-row-photos div img{
+        border-radius: 20px;
+    }
+
+    .second-row-photos, .third-row-photos {
+        margin-top: 18px;
+    }
+
+    .travel-stories {
+        padding-top: 75px;
+    }  
+    
+    .travel-stories p {
+        margin-top: 20px;
+        font-size: 16px;
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .storie-image{
+        width: 318px;
+        height: 455px;
+        border-radius: 20px;
+    }
+
+    .storie-image:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .storie-image .footer-foto-1024, .storie-image .footer-foto-1920{
+        display: none;
+    }
+
+    .storie-image .footer-foto-360 {
+        display: block;
+    }
+
+    .travel-stories-image {
+        margin-top: 50px;
+    }
+
+    .stories-image .footer-foto-360{
+        border-radius: 20px;
+    }
+
+    .storie-image:after {
+        content:'';
+        border-radius: 20px;
+    } 
+
+    .storie-image h3 {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        margin: 30px;
+        width: 50%;
+    }
+
+    .advantages{
+        width: 90%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 142%;
+        position: absolute;
+        z-index: 1;
+        color: #FFFFFF;
+        margin: 106px 20px 30px 30px; 
+    }
+
+    .advantages li{
+        font-size: 16px;
+    }
+
+    .advantages li::before {
+        content:"·";
+        font-size: 16px;
+        vertical-align:text-top;
+        line-height:20px;
+        padding: 0.55em;
+    }
+
+    .storie-image-bottom {
+        padding: 0px 30px 30px 30px;
+    }
+
+    .storie-image-bottom button {
+        font-size: 16px;
+        line-height: 142%;
+    }
+
+
+    .links-social-networks {
+        display: none;
+    }
+
+    .Email {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 75px;
+        width: 100%;
+    }
+
+    .Email img {
+        width: 130px;
+        border-radius: 20px;
+    }
+
+    .Email div{
+        text-align: center;
+        width: 88.33%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 33px;
+    }
+
+    .Email h3{
+        font-size: 23px;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 120%;
+        margin-bottom: 15px;
+    }
+
+    .Email p{
+        font-size: 16px;
+        line-height: 142%;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .Email p a{
+        font-size: 16px;
+        line-height: 142%;
+    }
+
+    footer {
+        margin-top: 75px;
+    }
+
+    .bottom {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 21px;
+    }
+
+    .bottom p {
+        font-size: 16px;
+    }
+
+    .bottom a {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 142%;
+    }
+
+    .bottom ul{
+        width: 87.22%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .bottom li {
+        margin-top: 7px;
+        margin-left: 15px;
+    }
+
+    .bottom li:first-child {
+        margin-left: 0;
+    }
+
+    .bottom img {
+        display: none;
+    }
+
+    .bottom div{
+        display: inline-block;
+        text-align: flex-end;
+        height: 20px;
+        width: 20px;
+        padding-right: 3px;
+        margin-right: 5px;
+    }
+
+    .bottom .network-360 {
+        display: block;
+    }
+}
