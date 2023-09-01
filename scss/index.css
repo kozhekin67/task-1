@@ -42,12 +42,11 @@ h3 {
 }
 
 .header-container {
-  background-image: url("/Users/macbook/Downloads/task №1/img/header-img.jpeg");
+  background-image: url(../img/header-img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 
 .menu {
   font-weight: 400;
@@ -373,7 +372,7 @@ li .tour-category:focus {
   font-size: 20px;
   line-height: 142%;
   color: #A6A6A6;
-  background: url("/Users/macbook/Downloads/task №1/img/Rectangle34.svg") no-repeat 95% 55% #F9F7F4;
+  background: url(../img/Rectangle34.svg) no-repeat 95% 55% #F9F7F4;
   cursor: pointer;
 }
 
@@ -488,7 +487,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + label::before {
-  background-image: url("/Users/macbook/Downloads/task №1/img/Ellipse2.svg");
+  background-image: url(../img/Ellipse2.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -524,7 +523,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked + label::before {
-  background-image: url("/Users/macbook/Downloads/task №1/img/Rectangle36Strok.svg");
+  background-image: url(../img/Rectangle36Strok.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -945,7 +944,7 @@ footer {
     background: #F4F0E9;
   }
   .data-field .dropdown_button:hover {
-    background: url("/Users/macbook/Downloads/task №1/img/Rectangle34.svg") no-repeat 95% 55% #F4F0E9;
+    background: url(../img/Rectangle34.svg) no-repeat 95% 55% #F4F0E9;
     border: 1px solid #F4F0E9;
     border-radius: 10px;
   }
@@ -1019,7 +1018,7 @@ footer {
 }
 @media (min-width: 1024px) and (max-width: 1919px) {
   .header-container {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("image.png"), url("/Users/macbook/Downloads/task №1/img/header-img.png") no-repeat center center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/header-img.png) no-repeat center center;
     background-size: cover;
   }
   .menu {
@@ -1165,7 +1164,7 @@ footer {
     padding-top: 140px;
   }
   .header-container {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("image.png"), url("/Users/macbook/Downloads/task №1/img/header-img.png") no-repeat center center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/header-img.png) no-repeat center center;
     background-size: cover;
   }
   .menu {
@@ -1342,12 +1341,12 @@ footer {
     margin-right: 10px;
   }
   input[type=radio]:checked + label::before {
-    background-image: url("/Users/macbook/Downloads/task №1/img/Ellipse-2-360.svg");
+    background-image: url(../img/Ellipse-2-360.svg);
     background-repeat: no-repeat;
     background-position: center center;
   }
   input[type=checkbox]:checked + label::before {
-    background-image: url("/Users/macbook/Downloads/task №1/img/Rectangle-36-360.svg");
+    background-image: url(../img/Rectangle-36-360.svg);
     background-repeat: no-repeat;
     background-position: center center;
   }

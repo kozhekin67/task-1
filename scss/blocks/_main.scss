@@ -206,7 +206,7 @@ li .tour-category:focus {
     font-size: 20px;
     line-height: 142%; 
     color: #A6A6A6;
-    background: url("/Users/macbook/Downloads/task №1/img/Rectangle34.svg") no-repeat 95% 55% #F9F7F4;
+    background: url(../img/Rectangle34.svg) no-repeat 95% 55% #F9F7F4;
     cursor: pointer;
 }
 
@@ -323,7 +323,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label::before {
-    background-image: url("/Users/macbook/Downloads/task №1/img/Ellipse2.svg");
+    background-image: url(../img/Ellipse2.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -358,7 +358,7 @@ input[type="checkbox"] {
     padding: 0.25em;
 }
 input[type="checkbox"]:checked + label::before {
-    background-image: url("/Users/macbook/Downloads/task №1/img/Rectangle36Strok.svg");
+    background-image: url(../img/Rectangle36Strok.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
