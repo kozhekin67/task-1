@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+input, button, textarea {
+    font-family: inherit;
+}
+
 button {
     cursor: pointer;
 }
