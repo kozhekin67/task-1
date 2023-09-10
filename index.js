@@ -28,16 +28,28 @@ window.onscroll = function showMenu () {
     if (window.pageYOffset > 450) {
         menu.classList.add('menu_scroll');
         links.forEach((link)=>link.style.color = '#1B1F2B');
-        linksHover.forEach((l)=>l.style.borderBottomColor = '#1B1F2B');
+        linksHover.forEach((l)=>l.classList.add('nav-link__scrool'));
         logo.classList.add('header-logo__scrool');
         telephone.classList.add('telephone__scrool');
     }
     else {
         menu.classList.remove('menu_scroll');
         links.forEach((link)=>link.style.color = 'white');
-        linksHover.forEach((linksHover)=>linksHover.style.borderBottomColor = 'white');
+        linksHover.forEach((l)=>l.classList.remove('nav-link__scrool'));
         logo.classList.remove('header-logo__scrool');
         telephone.classList.remove('telephone__scrool');
     }
     
+}
+
+const sections = document.querySelectorAll('a[href*="#"]')
+for (let section of sections) {
+    section.addEventListener('click', function(event) {
+        event.preventDefault();
+        const blockID = section.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
 }

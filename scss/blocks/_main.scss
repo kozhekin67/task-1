@@ -16,18 +16,12 @@
 }
 
 .tour-category {
+    position: relative;
     color: #1B1F2B;
     font-weight: 700;
     font-size: 23px;
     list-style-type: none;
-}
-
-li .tour-category:focus {
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 122%;
-    color: #EFA501;
-    border-bottom: 2px solid #EFA501;
+    transition: all 200ms ease-in;
 }
 
 .category-images {
@@ -48,6 +42,7 @@ li .tour-category:focus {
     border-radius: 50px;
     flex-wrap: wrap;
 }
+
 .card-tour:after {
     content:'';
     position:absolute;
@@ -357,6 +352,7 @@ input[type="checkbox"] {
     color: #1B1F2B;
     padding: 0.25em;
 }
+
 input[type="checkbox"]:checked + label::before {
     background-image: url(../img/Rectangle36Strok.svg);
     background-repeat: no-repeat;
@@ -526,7 +522,7 @@ h2 + p{
     overflow: hidden;
 }
 
-.storie-image:after {
+.storie-image::after {
     box-sizing: border-box;
     content:'';
     position:absolute;
@@ -597,6 +593,7 @@ h2 + p{
     width: 100%;
     padding: 0px 60px 60px 60px;
 }
+
 .storie-image-bottom button {
     color: #FFFFFF;
     z-index: 1;
@@ -630,6 +627,7 @@ h2 + p{
     margin-left: 36px;
     position: relative;
     z-index: 1;
+    transition: all 200ms ease-in;
 }
 
 .Email {
