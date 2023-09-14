@@ -17,6 +17,14 @@ document.addEventListener('click', function (event){
     }
 });
 
+document.addEventListener('click', function(event) {
+    let refund = document.querySelector('.refund');
+    if (event.target == refund) {
+        document.querySelector('.dropdown_button').innerText = innerText = 'Куда хотите ехать';
+        document.querySelector('.dropdown_button').classList.remove('dropdown_button--active');
+    }
+});
+
 window.onscroll = function showMenu () {
     let menu = document.querySelector('.menu');
     let links = document.querySelectorAll('.nav-link');
@@ -32,6 +40,7 @@ window.onscroll = function showMenu () {
         logo.classList.add('header-logo__scrool');
         telephone.classList.add('telephone__scrool');
     }
+    
     else {
         menu.classList.remove('menu_scroll');
         links.forEach((link)=>link.style.color = 'white');
