@@ -1125,6 +1125,7 @@ footer {
   }
   .card-tour h3 {
     width: 350px;
+    white-space: nowrap;
   }
   .cost {
     top: 110px;
