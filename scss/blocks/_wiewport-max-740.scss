@@ -1,0 +1,88 @@
+
+@media (max-width: 740px) {
+
+.category-images {
+    width: 360px;
+}
+
+.questionnaire form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 318px;
+}
+
+.containers-reviews{
+    width: 318px;
+}    
+
+.storie-image .footer-foto-1024, .storie-image .footer-foto-1920{
+    display: none;
+}
+
+.storie-image .footer-foto-360 {
+    display: block;
+}
+
+.storie-image{
+    width: 318px;
+    height: 455px;
+    border-radius: 20px;
+}
+
+.storie-image:not(:first-child) {
+    margin-top: 20px;
+}
+.stories-image .footer-foto-360{
+    border-radius: 20px;
+}
+
+.storie-image:after {
+    content:'';
+    border-radius: 20px;
+} 
+
+.storie-image h3 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    margin: 30px;
+    width: 50%;
+}
+.travel-stories-image {
+    margin-top: 50px;
+}
+
+.advantages{
+    width: 90%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;
+    position: absolute;
+    z-index: 1;
+    color: #FFFFFF;
+    margin: 106px 20px 30px 30px; 
+}
+
+.advantages li{
+    font-size: 16px;
+}
+
+.advantages li::before {
+    content:"·";
+    font-size: 16px;
+    vertical-align:text-top;
+    line-height:20px;
+    padding: 0.55em;
+}
+
+.storie-image-bottom {
+    padding: 0px 30px 30px 30px;
+}
+
+.storie-image-bottom button {
+    font-size: 16px;
+    line-height: 142%;
+}
+
+}

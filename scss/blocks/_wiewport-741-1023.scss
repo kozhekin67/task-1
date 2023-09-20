@@ -1,0 +1,28 @@
+@media (min-width: 741px) and (max-width: 1023px) {
+    .category-images {
+        width: 654px;
+    }
+
+    .questionnaire form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 654px;
+    }
+
+    .containers-reviews{
+        width: 654px;
+    }
+
+    .storie-image{
+        width: 654px;
+    }
+
+    .storie-image .footer-foto-1920 {
+        display: none;
+    }
+
+    .footer-foto-1024 {
+        display: block;
+        transition: all 300ms ease-in-out;
+    }
+}

@@ -18,6 +18,11 @@ button, input, textarea {
     cursor: pointer;
     transition: all 300ms ease-in;
 }
+
+.in-detail button, .storie-image-bottom button {
+    transition-duration: 300ms;
+    transition-property: background-color;
+}
  
 .logo-nav li, .tour-selection-categories li, .storie-image-bottom ul li{
     list-style-type: none;

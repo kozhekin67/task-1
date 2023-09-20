@@ -66,6 +66,7 @@
     .questionnaire form {
         padding: 60px;
     }
+    
     .data-field {
         width: 48.75%;
     }
@@ -112,18 +113,7 @@
         object-fit:fill;
     }
 
-    .storie-image, .bottom {
+    .bottom {
         width: 918px;
     }
-
-    .storie-image .footer-foto-1920 {
-        display: none;
-    }
-
-    .footer-foto-1024 {
-        display: block;
-        transition: all 300ms ease-in-out;
-    }
-
-
 } 
