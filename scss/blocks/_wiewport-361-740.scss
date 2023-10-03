@@ -1,0 +1,10 @@
+@media (min-width: 361px) and (max-width: 740px) {
+    .storie-image .footer-foto-1920 {
+        display: none;
+    }
+
+    .footer-foto-1024 {
+        display: block;
+        transition: all 300ms ease-in-out;
+    }
+}

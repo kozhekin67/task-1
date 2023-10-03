@@ -2,37 +2,45 @@
 @media (max-width: 740px) {
 
 .category-images {
-    width: 360px;
+    width: 100%;
+}
+
+.card-tour {
+    width: 88.33%;
+}
+
+.questionnaire {
+    width: 88.33%;
 }
 
 .questionnaire form {
     margin-left: auto;
     margin-right: auto;
-    width: 318px;
+    width: 100%;
 }
 
 .containers-reviews{
-    width: 318px;
+    width: 88.33%;
 }    
 
-.storie-image .footer-foto-1024, .storie-image .footer-foto-1920{
-    display: none;
-}
-
-.storie-image .footer-foto-360 {
-    display: block;
-}
-
 .storie-image{
-    width: 318px;
+    width: 88.33%;
     height: 455px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.storie-image img{
+    width: auto;
+    height: 100%;
 }
 
 .storie-image:not(:first-child) {
     margin-top: 20px;
 }
-.stories-image .footer-foto-360{
+
+.stories-image img{
     border-radius: 20px;
 }
 
@@ -48,7 +56,9 @@
     letter-spacing: 0.04em;
     margin: 30px;
     width: 50%;
+    left: 0;
 }
+
 .travel-stories-image {
     margin-top: 50px;
 }
@@ -57,11 +67,12 @@
     width: 90%;
     font-weight: 400;
     font-size: 16px;
-    line-height: 142%;
+    line-height: 145%;
     position: absolute;
     z-index: 1;
     color: #FFFFFF;
     margin: 106px 20px 30px 30px; 
+    left: 0;
 }
 
 .advantages li{

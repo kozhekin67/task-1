@@ -1,0 +1,11 @@
+@media (max-width: 360px) {
+
+.storie-image .footer-foto-1024, .storie-image .footer-foto-1920{
+    display: none;
+}
+
+.storie-image .footer-foto-360 {
+    display: block;
+}
+
+}

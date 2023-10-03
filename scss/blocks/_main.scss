@@ -92,18 +92,20 @@
 }
 
 .in-detail {
+    position: relative;
     font-weight: 700;
     font-size: 23px;
     color: #FFFFFF;
     position: absolute;
     display: flex;
     z-index: 1;
-    bottom: 50px;
+    bottom: 60px;
     left: 50px;
     align-items: center;
 }
 
 .in-detail button {
+    position: absolute;
     color: #FFFFFF;
     z-index: 1;
     background-color: transparent;
@@ -115,9 +117,12 @@
     line-height: 122%;
 }
 
-.in-detail button img {
+.in-detail button img, .storie-image-bottom button img{
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
     display: inline-block;
-    margin-left: 12px;
+    margin-left: 15px;
     width: 22px;
 }
 
@@ -586,35 +591,36 @@ h2 + p{
 .storie-image-bottom {
     position: absolute;
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    bottom: 0px;
+    bottom: 30px;
     margin: auto;
     width: 100%;
-    padding: 0px 60px 60px 60px;
+    padding: 0px 55px 85px 50px;
 }
 
 .storie-image-bottom button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: #FFFFFF;
     z-index: 1;
     background-color: transparent;
     border: none;
-    margin-bottom: auto;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
     line-height: 122%;
-}
-
-.storie-image-bottom button img {
-    display: inline-block;
-    margin-left: 12px;
-    width: 22px;
+    margin-left: -10px;
+    padding: 7px 50px 7px 20px;
 }
 
 .links-social-networks {
+    position: absolute;
     display: flex;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 .links-social-networks a {

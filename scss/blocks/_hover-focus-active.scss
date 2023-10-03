@@ -52,14 +52,20 @@
         transition: all 300ms ease-in;
         transform: scale(1.2);
     }
+
+    .card-tour:hover .in-detail img{
+        transition: all 100ms ease-in;
+        transform: scale(1);
+        top: 50%;
+        transform: translateY(-50%);
+    }
     
     .card-tour:hover button{
         background: #286562;
         box-sizing:initial;
         margin-left: -20px;
-        margin-bottom: -7px;
         border-radius: 50px;
-        padding: 7px 20px;
+        padding: 7px 50px 7px 20px;
     }
 
     .data-field input:hover, .data-field-comment textarea:hover {
@@ -100,17 +106,13 @@
     .storie-image a:hover::before {
         width: 100%;
     }
-
-    .storie-image:hover a {
-        bottom: -7px;
-    }
     
     .storie-image:hover button{
         background: #286562;
-        margin-bottom: -7px;
-        margin-left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
         border-radius: 50px;
-        padding: 7px 20px;
+        box-sizing:initial;
     }
     
     .storie-image:hover .footer-foto-1920, .storie-image:hover .footer-foto-1024{
