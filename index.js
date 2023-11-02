@@ -30,7 +30,7 @@ window.onscroll = function showMenu () {
     let links = document.querySelectorAll('.nav-link');
     let linksHover = document.querySelectorAll('.nav-link');
     let logo = document.querySelector('.header-logo');
-    let telephone = document.querySelector('.telephone');
+    let telephone = document.querySelector('.phone-number');
 
 
     if (window.pageYOffset > 450) {
@@ -38,7 +38,7 @@ window.onscroll = function showMenu () {
         links.forEach((link)=>link.style.color = '#1B1F2B');
         linksHover.forEach((l)=>l.classList.add('nav-link__scrool'));
         logo.classList.add('header-logo__scrool');
-        telephone.classList.add('telephone__scrool');
+        telephone.classList.add('phone-number__scrool');
     }
     
     else {
@@ -46,7 +46,7 @@ window.onscroll = function showMenu () {
         links.forEach((link)=>link.style.color = 'white');
         linksHover.forEach((l)=>l.classList.remove('nav-link__scrool'));
         logo.classList.remove('header-logo__scrool');
-        telephone.classList.remove('telephone__scrool');
+        telephone.classList.remove('phone-number__scrool');
     }
     
 }

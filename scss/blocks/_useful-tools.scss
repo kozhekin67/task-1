@@ -1,0 +1,54 @@
+$white-color: #FFFFFF;
+$dark-color: #1B1F2B;
+$black-color: #000000;
+$bg-color: #F9F7F4;
+$light-grey-color: #F4F0E9;
+$grey-color: #A6A6A6;
+$green-color: #286562;
+$light-green-color: #E0F0E5;
+$orange-color: #EFA501;
+
+$breakpoints: (
+    smal: 530px,
+    medium: 919px,
+    large: 1400px,
+);
+
+@mixin from($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if ($size == 0) {
+        @content;
+    } @else {
+        @media screen and (min-width: ($size + 1px)) {
+        @content;
+        }
+    }
+}
+
+@mixin before($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if ($size == 0) {
+        @content;
+    }
+    @else {
+        @media screen and (max-width: $size) {
+            @content;
+        }
+    }
+}
+
+@mixin from-to($from, $to) {
+    $min: map-get($breakpoints, $from) + 1px;
+    $max: map-get($breakpoints, $to) - 1px;
+
+    @if ($min == 0) {
+        @media screen and (max-width: $max) {
+        @content;
+        }
+    } @else {
+        @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+        }
+    }
+}

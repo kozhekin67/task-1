@@ -6,9 +6,9 @@
 }
 
 html, body {
-    font-family: 'Roboto', 'Arial', sans-serif;
     width: 100%;
-  }
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -19,16 +19,11 @@ button, input, textarea {
     transition: all 300ms ease-in;
 }
 
-/*.in-detail button, .storie-image-bottom button {
-    transition-duration: 300ms;
-    transition-property: background-color;
-}
- */
 .logo-nav li, .tour-selection-categories li, .storie-image-bottom ul li{
     list-style-type: none;
 }
 
-h2 {
+.section-title {
     font-weight: 700;
     text-align: center;
     font-size: 59px;
@@ -36,7 +31,7 @@ h2 {
     font-style: normal;
 }
 
-h3 {
+.subtitle-section {
     font-weight: 500;
     font-size: 35px;
     line-height: 122%;
