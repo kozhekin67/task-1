@@ -1,0 +1,29 @@
+@mixin dekstop {
+    @media (min-width: 920px) and (max-width: 1399px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 919px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 530px) {
+        @content;
+    }
+}
+
+@mixin event_selectors {
+    @media (min-width: 920px) {
+        @content;
+    }
+}
+
+@mixin subtitle-style {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+}

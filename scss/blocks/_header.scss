@@ -1,68 +1,133 @@
-$white-color: #FFFFFF;
-$dark-color: #1B1F2B;
-$black-color: #000000;
-
-
-.header-container {
-    background-image: url(../img/header-img.jpeg);
+.header-block {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/header-photo.png) no-repeat center center; 
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+    &__menu {z-index: 1;
+        position: absolute;
+        left:50%;
+        display: flex; 
+        justify-content:space-between;
+        align-items: center;
+        width: 100%;
+        height: 88px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 19.58%;
+        padding-right: 19.58%;
+        font-weight: 400;
+        font-size: 20px;
+        color: $white-color;
+        transform: translate(-50%);
+        
+        @include dekstop {
+            padding-left: 5.6%;
+            padding-right: 5.6%; 
+        }
+    
+        @include tablet {
+            padding-left: 5.6%;
+            padding-right: 5.6%;
+            font-size: 16px;
+        }
+    }
+
+    &__menu_scroll {
+        z-index: 2;
+        position:fixed;
+        align-items: center;
+        top:0;
+        width: 100%;
+        padding-left: 19.58%;
+        padding-right: 19.58%;
+        background: rgba(243, 239, 232, 0.6);
+        backdrop-filter: blur(27px);
+        color: $dark-color;
+
+        @include dekstop{
+            z-index: 2;
+            width: 100%;
+            padding-left: 5.6%;
+            padding-right: 5.6%; 
+        }
+
+        @include tablet {
+            padding-left: 5.6%;
+            padding-right: 5.6%; 
+            z-index: 2;
+            width: 100%;
+        }
+    }
 }
 
-.menu {
-    z-index: 1;
-    position: absolute;
-    left:50%;
-    display: flex; 
-    justify-content:space-between;
-    align-items: center;
-    width: 100%;
-    height: 88px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 19.58%;
-    padding-right: 19.58%;
-    font-weight: 400;
-    font-size: 20px;
-    color: $white-color;
-    transform: translate(-50%);
+.your-tur {
+    &__img {
+        fill: $white-color;
+
+        @include tablet {
+            width: 133px;
+        }
+    }
+
+    &__img_scrool {
+        fill: $dark-color;
+    }
 }
 
-.menu_scroll {
-    z-index: 2;
-    position:fixed;
-    align-items: center;
-    top:0;
-    width: 100%;
-    padding-left: 19.58%;
-    padding-right: 19.58%;
-    background: rgba(243, 239, 232, 0.6);
-    backdrop-filter: blur(27px);
-    color: $dark-color;
+.site-sections {
+    @include tablet {
+        display: none;
+    }
+
+    &__list-site-sections {
+        display: flex; 
+        justify-content:space-between;
+        width: 468px;
+
+        @include dekstop{
+            width: 408px;
+        }
+    }
+
+    &__section-link {
+        position: relative;
+        color: $white-color;
+
+        @include event_selectors {
+            &:hover::before {
+                width: 100%;
+            }
+            
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0%;
+                border-bottom: 1px solid $white-color;
+                transition: all 200ms ease-in;
+            }
+        }
+    }
+
+    &__section-link_scrool {
+        @include event_selectors {
+            &::before {
+                content: '';
+                border-bottom: 1px solid $black-color;
+            }
+        }
+    }
 }
 
-.header-logo {
-    fill: $white-color;
-}
+.phone-number{
+    &__reference-number {
+        position: relative;
+        color: $white-color;
+    }
 
-.header-logo__scrool  {
-    fill: $dark-color;
-}
-
-.logo-nav {
-    display: flex; 
-    justify-content:space-between;
-    width: 468px;
-}
-
-.nav-link, .phone-number{
-    position: relative;
-    color: $white-color;
-}
-
-.phone-number__scrool {
-    color: $black-color;
+    &__reference-number_scrool {
+        color: $black-color;
+    }
 }
 
 .title {
@@ -70,15 +135,29 @@ $black-color: #000000;
     margin-left: auto;
     margin-right: auto;
     color: $white-color;
-}
 
-.header-title {
-    text-align: center;
-    padding-top: 210px;
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 109%;
-    letter-spacing: 0.02em;
+    @include tablet {
+        max-width: 550px;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: 210px;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 109%;
+        letter-spacing: 0.02em;
+
+        @include tablet {
+            padding-top: 140px;
+            font-size: 34px;
+            line-height: 112%;
+            letter-spacing: 0.02em;
+        }
+    }
 }
 
 .introduction {
@@ -90,6 +169,17 @@ $black-color: #000000;
     line-height: 142%;
     font-size: 20px;
     color: $white-color;
+
+    @include dekstop {
+        max-width: 500px;
+        width: 43.16%;
+    }
+
+    @include tablet {
+        width: 86.11%;
+        margin-top: 40px;
+        font-size: 16px;
+    }
 }
 
 .findtour {
@@ -97,15 +187,40 @@ $black-color: #000000;
     margin-top: 46px;
     padding-bottom: 116px;
     font-size: 17px;
-}
 
-.tour-search-button {
-    cursor: pointer;
-    text-align: center;
-    width: 118px;
-    height: 38px;
-    border-radius: 10px;
-    border: none;
-    background-color: $white-color;
-    font-size: 17px;
+    @include tablet {
+        margin-top: 40px;
+        padding-bottom: 52px;
+    }
+
+    &__search-button {
+        cursor: pointer;
+        text-align: center;
+        width: 118px;
+        height: 38px;
+        border-radius: 10px;
+        border: none;
+        background-color: $white-color;
+        font-size: 17px;
+
+        @include event_selectors {
+            &:hover {
+                background-color: $orange-color;
+                border-radius: 10px;
+                color: $white-color;
+            }
+
+            &:active {
+                border-radius: 10px;
+                background-color: #F8E6BE;
+                color: $dark-color;
+            }
+        }
+
+        @include tablet {
+            width: 114px;
+            height: 33px; 
+            font-size: 16px;
+        }
+    }
 }
