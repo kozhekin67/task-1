@@ -1,3 +1,11 @@
+const refund = document.querySelector('.dropdown__refund');
+
+const menu = document.querySelector('.header-block__menu');
+const links = document.querySelectorAll('.site-sections__section-link');
+const linksHover = document.querySelectorAll('.site-sections__section-link');
+const logo = document.querySelector('.your-tur__img');
+const telephone = document.querySelector('.phone-number__reference-number');
+
 document.querySelector('.dropdown__button').addEventListener('click', function () {
     document.querySelector('.dropdown__list').classList.toggle('dropdown__list_visible');
 });
@@ -17,21 +25,12 @@ document.addEventListener('click', function (event){
     }
 });
 
-document.addEventListener('click', function(event) {
-    let refund = document.querySelector('.dropdown__refund');
-    if (event.target == refund) {
-        document.querySelector('.dropdown__button').innerText = innerText = 'Куда хотите ехать';
-        document.querySelector('.dropdown__button').classList.remove('dropdown__button_active');
-    }
-});
+refund.onclick = function() {
+    document.querySelector('.dropdown__button').innerText = innerText = 'Куда хотите ехать';
+    document.querySelector('.dropdown__button').classList.remove('dropdown__button_active');
+}
 
 window.onscroll = function showMenu () {
-    let menu = document.querySelector('.header-block__menu');
-    let links = document.querySelectorAll('.site-sections__section-link');
-    let linksHover = document.querySelectorAll('.site-sections__section-link');
-    let logo = document.querySelector('.your-tur__img');
-    let telephone = document.querySelector('.phone-number__reference-number');
-
 
     if (window.pageYOffset > 450) {
         menu.classList.add('header-block__menu_scroll');

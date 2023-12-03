@@ -157,88 +157,7 @@
         }
     }
 }
-/*
-.tour-selection-list {
-    display: flex; 
-    justify-content:space-between;
-    width: 700px;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
 
-    @include tablet {
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content:center;
-        width: 100%;
-        height: auto;
-        margin-top: 30px;
-        gap: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
-.tour-selection-point{
-    @include tablet {
-        line-height: 142%;
-    }
-}
-
-.tour-category {
-    position: relative;
-    color: $dark-color;
-    font-weight: 700;
-    font-size: 23px;
-    list-style-type: none;
-    transition: all 200ms ease-in;
-
-    @include event_selectors {
-        &:hover::before {
-            width: 100%;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: $dark-color;
-            transition: all 200ms ease-in;
-        }
-
-        &:focus::before {
-            width: 100%;
-            background-color: $orange-color;
-        }
-
-        &:focus{
-            color: $orange-color;
-        }
-    }
-
-    @include tablet {
-        font-size: 16px;
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0%;
-            height: 0%;
-            background-color: $dark-color;
-            transition: all 200ms ease-in;
-        }
-        &:focus {
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 142%;
-        }
-    }
-}
-*/
 .tour-cards {
     display: flex;
     flex-wrap: wrap;
@@ -506,7 +425,7 @@
 
 .dropdown {
     position: relative;
-
+    
     @include tablet {
         margin-top: 8px;
         padding: 0;
@@ -515,7 +434,6 @@
     }
 
     &__button {
-        text-align: left;
         width: 100%;
         margin-top: 8px;
         padding: 20px;
@@ -527,15 +445,15 @@
         font-size: 20px;
         line-height: 142%; 
         color: $grey-color;
-        background: url(../img/buttons/drop-down-list-button.svg) no-repeat 95% 55% $bg-color;
-        transition: all 0ms ease-in;
+        background: $bg-color;
+        transition: all 200ms ease-in;
         appearance: none;
 
         @include  event_selectors {
             &:hover {
                 border: 1px solid $light-grey-color;
                 border-radius: 10px;
-                background: url(../img/buttons/drop-down-list-button.svg) no-repeat 95% 55% $light-grey-color;
+                background: $light-grey-color;
             }
 
             &:active {
@@ -556,6 +474,21 @@
 
     &__button_active {
         color: $dark-color;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        fill: $dark-color;
+        pointer-events: none;
+
+        @include tablet {
+            top: 12px;
+            right: 10px;
+        }
     }
 
     &__list {
