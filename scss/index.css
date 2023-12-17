@@ -1386,13 +1386,7 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 37px;
   flex-shrink: 0;
-}
-@media (max-width: 919px) {
-  .travel-history__name {
-    gap: 20px;
-  }
 }
 .travel-history__subtitle-section {
   z-index: 1;
@@ -1411,9 +1405,28 @@ ul {
     letter-spacing: 0.04em;
   }
 }
-.travel-history__advantages {
+.travel-history__description {
   z-index: 1;
   width: 555px;
+  margin-top: 38px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142%;
+  color: #FFFFFF;
+}
+@media (max-width: 919px) {
+  .travel-history__description {
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: #FFFFFF;
+  }
+}
+.travel-history__advantages {
+  z-index: 1;
+  margin-top: 30px;
   font-weight: 400;
   font-size: 20px;
   line-height: 142%;
@@ -1421,8 +1434,8 @@ ul {
 }
 @media (max-width: 919px) {
   .travel-history__advantages {
-    z-index: 1;
     width: 100%;
+    margin-top: 22px;
     font-weight: 400;
     font-size: 16px;
     line-height: 145%;
