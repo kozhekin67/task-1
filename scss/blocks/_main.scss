@@ -924,18 +924,13 @@
     &__container {
         display: flex;
         flex-direction:column;
-        width: 96.88%;
+        width: 100%;
         margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
         row-gap: 30px;
 
-        @include dekstop {
-            width: 96.09%;
-        }
-
         @include tablet {
-            width: 88.33%;
             margin-top: 50px;
             row-gap: 18px;
         }
@@ -943,15 +938,61 @@
 }
 
 .row-photos {
-    display: flex;
+    display: grid;
+    grid-template-rows: 300px;
     justify-content: space-between;
+    padding-left: 1.56%;
+    padding-right: 1.56%;
 
-    &__:nth-child(3) {
-        margin-top: 30px;
+    &:nth-child(1) {
+        grid-template-columns: repeat(4, 23.79%);
+
+        @include dekstop {
+            grid-template-columns: repeat(3, 31.98%);
+        }
 
         @include tablet {
-            margin-top: 18px;
+            grid-template-columns: repeat(2, 47.18%);
         }
+    }
+
+    &:nth-child(2) {
+        grid-template-columns: repeat(5, 18.77%);
+
+        @include dekstop {
+            grid-template-columns: repeat(4, 23.48%);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(3, 31.24%);
+        }
+    }
+
+    &:nth-child(3) {
+        grid-template-columns: repeat(4, 23.79%);
+
+        @include dekstop {
+            grid-template-columns: repeat(3, 31.98%);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 48.43%);
+        }
+    }
+
+    @include dekstop {
+        column-gap: 20px;
+        padding-left: 1.95%;
+        padding-right: 1.95%;
+    }
+
+    @include tablet {
+        padding-left: 5.83%;
+        padding-right: 5.83%;
+    }
+
+    @include mobile {
+        grid-template-rows: 110px;
     }
 
     &__travel-photo{
@@ -963,50 +1004,6 @@
         
         @include tablet {
             border-radius: 20px;
-        }
-    }
-
-    &__first-row, &__third-row {
-        width: 23.8%;
-        height: 300px;
-
-        @include dekstop {
-            width: 31.98%;
-        }
-
-        @include mobile {
-            height: 110px;
-        }
-    }
-    
-    &__first-row {
-        @include tablet {
-            width: 47.17%;
-        }
-    }
-
-    &__third-row {
-        @include tablet {
-            width: 48.5%;
-        }
-    }
-
-    &__second-row{
-        width: 18.8%;
-        height: 301px;
-        overflow: hidden;
-    
-        @include dekstop {
-            width: 23.48%;
-        }
-    
-        @include tablet {
-            width: 31.24%;    
-        }
-    
-        @include mobile {
-            width: 31.24%;
-            height: 110px;   
         }
     }
 
@@ -1025,7 +1022,7 @@
             display: none;
         }
     }
-    
+
     &__first-row:not(:nth-child(3)) &__travel-photo {
         @include dekstop {
             object-fit:fill;
@@ -1220,10 +1217,6 @@
     &__detail {
         z-index: 1;
         margin-left: -20px;
-    
-        @include tablet {
-            //margin-left: -18px;
-        }
     }
 
     &__links-social-networks {

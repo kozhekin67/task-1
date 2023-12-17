@@ -1164,35 +1164,82 @@ ul {
 .travel-photos__container {
   display: flex;
   flex-direction: column;
-  width: 96.88%;
+  width: 100%;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   row-gap: 30px;
 }
-@media (min-width: 920px) and (max-width: 1399px) {
-  .travel-photos__container {
-    width: 96.09%;
-  }
-}
 @media (max-width: 919px) {
   .travel-photos__container {
-    width: 88.33%;
     margin-top: 50px;
     row-gap: 18px;
   }
 }
 
 .row-photos {
-  display: flex;
+  display: grid;
+  grid-template-rows: 300px;
   justify-content: space-between;
+  padding-left: 1.56%;
+  padding-right: 1.56%;
 }
-.row-photos__:nth-child(3) {
-  margin-top: 30px;
+.row-photos:nth-child(1) {
+  grid-template-columns: repeat(4, 23.79%);
+}
+@media (min-width: 920px) and (max-width: 1399px) {
+  .row-photos:nth-child(1) {
+    grid-template-columns: repeat(3, 31.98%);
+  }
 }
 @media (max-width: 919px) {
-  .row-photos__:nth-child(3) {
-    margin-top: 18px;
+  .row-photos:nth-child(1) {
+    grid-template-columns: repeat(2, 47.18%);
+  }
+}
+.row-photos:nth-child(2) {
+  grid-template-columns: repeat(5, 18.77%);
+}
+@media (min-width: 920px) and (max-width: 1399px) {
+  .row-photos:nth-child(2) {
+    grid-template-columns: repeat(4, 23.48%);
+  }
+}
+@media (max-width: 919px) {
+  .row-photos:nth-child(2) {
+    grid-template-columns: repeat(3, 31.24%);
+  }
+}
+.row-photos:nth-child(3) {
+  grid-template-columns: repeat(4, 23.79%);
+}
+@media (min-width: 920px) and (max-width: 1399px) {
+  .row-photos:nth-child(3) {
+    grid-template-columns: repeat(3, 31.98%);
+  }
+}
+@media (max-width: 919px) {
+  .row-photos:nth-child(3) {
+    grid-template-columns: repeat(2, 48.43%);
+  }
+}
+@media (min-width: 920px) and (max-width: 1399px) {
+  .row-photos {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    padding-left: 1.95%;
+    padding-right: 1.95%;
+  }
+}
+@media (max-width: 919px) {
+  .row-photos {
+    padding-left: 5.83%;
+    padding-right: 5.83%;
+  }
+}
+@media (max-width: 530px) {
+  .row-photos {
+    grid-template-rows: 110px;
   }
 }
 .row-photos__travel-photo {
@@ -1207,51 +1254,6 @@ ul {
 @media (max-width: 919px) {
   .row-photos__travel-photo {
     border-radius: 20px;
-  }
-}
-.row-photos__first-row, .row-photos__third-row {
-  width: 23.8%;
-  height: 300px;
-}
-@media (min-width: 920px) and (max-width: 1399px) {
-  .row-photos__first-row, .row-photos__third-row {
-    width: 31.98%;
-  }
-}
-@media (max-width: 530px) {
-  .row-photos__first-row, .row-photos__third-row {
-    height: 110px;
-  }
-}
-@media (max-width: 919px) {
-  .row-photos__first-row {
-    width: 47.17%;
-  }
-}
-@media (max-width: 919px) {
-  .row-photos__third-row {
-    width: 48.5%;
-  }
-}
-.row-photos__second-row {
-  width: 18.8%;
-  height: 301px;
-  overflow: hidden;
-}
-@media (min-width: 920px) and (max-width: 1399px) {
-  .row-photos__second-row {
-    width: 23.48%;
-  }
-}
-@media (max-width: 919px) {
-  .row-photos__second-row {
-    width: 31.24%;
-  }
-}
-@media (max-width: 530px) {
-  .row-photos__second-row {
-    width: 31.24%;
-    height: 110px;
   }
 }
 @media (min-width: 920px) and (max-width: 1399px) {
