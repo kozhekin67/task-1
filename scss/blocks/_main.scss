@@ -111,10 +111,6 @@
         transition: all 200ms ease-in;
 
         @include event-selectors {
-            &:hover&::before {
-                width: 100%;
-            }
-
             &::before {
                 position: absolute;
                 bottom: -8px;
@@ -124,6 +120,10 @@
                 content: '';
                 background-color: $dark-color;
                 transition: all 200ms ease-in;
+            }
+
+            &:hover::before {
+                width: 100%;
             }
 
             &:focus::before {
@@ -610,25 +610,6 @@
         }
     }
 
-    &__custom-button {
-        display: none;
-        margin-left: 11px;
-
-        &:checked + &__button::before {
-            background-image: url("../img/buttons/radio-button.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        @include tablet {
-            &:checked + &__button::before {
-                background-image: url("../img/buttons/radio-button-mobile.svg");
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
-        }
-    }
-
     &__button {
         display: flex;
         align-items: center;
@@ -655,6 +636,25 @@
             }
         }
     }
+
+    &__custom-button {
+        display: none;
+        margin-left: 11px;
+
+        &:checked + .radio-group__button::before {
+            background-image: url("../img/buttons/radio-button.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        @include tablet {
+            &:checked + .radio-group__button::before {
+                background-image: url("../img/buttons/radio-button-mobile.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
 }
 
 .agreements {
@@ -665,24 +665,6 @@
     @include tablet {
         display: flex;
         margin-top: 29px;
-    }
-
-    &__custom-button {
-        display: none;
-
-        &:checked + &__button::before {
-            background-image: url("../img/buttons/checkbox.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        @include tablet {
-            &:checked + &__button::before {
-                background-image: url("../img/buttons/checkbox-mobile.svg");
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
-        }
     }
 
     &__button {
@@ -727,6 +709,24 @@
         }
     }
 
+    &__custom-button {
+        display: none;
+
+        &:checked + .agreements__button::before {
+            background-image: url("../img/buttons/checkbox.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        @include tablet {
+            &:checked + .agreements__button::before {
+                background-image: url("../img/buttons/checkbox-mobile.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+    
     &__contract-reference{
         padding: 0.25em;
         color: $dark-color;

@@ -6,14 +6,17 @@
   outline: none;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   width: 100%;
   font-family: Roboto, Arial, sans-serif;
   background-color: #F9F7F4;
-}
-
-a {
-  text-decoration: none;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 button, input, textarea {
@@ -36,6 +39,30 @@ ul {
     line-height: 112%;
     letter-spacing: 0.02em;
   }
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
 }
 
 #choosing-tour, #questionnaire, #reviews, #travel-stories {
@@ -139,9 +166,6 @@ ul {
   color: #FFF;
 }
 @media (width >= 920px) {
-  .site-sections__section-link:hover::before {
-    width: 100%;
-  }
   .site-sections__section-link::before {
     position: absolute;
     bottom: -3px;
@@ -150,6 +174,9 @@ ul {
     content: "";
     border-bottom: 1px solid #FFF;
     transition: all 200ms ease-in;
+  }
+  .site-sections__section-link:hover::before {
+    width: 100%;
   }
 }
 @media (width >= 920px) {
@@ -376,9 +403,6 @@ ul {
   transition: all 200ms ease-in;
 }
 @media (width >= 920px) {
-  .tours-block__link:hover::before {
-    width: 100%;
-  }
   .tours-block__link::before {
     position: absolute;
     bottom: -8px;
@@ -388,6 +412,9 @@ ul {
     content: "";
     background-color: #1B1F2B;
     transition: all 200ms ease-in;
+  }
+  .tours-block__link:hover::before {
+    width: 100%;
   }
   .tours-block__link:focus::before {
     width: 100%;
@@ -866,22 +893,6 @@ ul {
 .radio-group__block:not(:first-child) {
   margin-left: 31px;
 }
-.radio-group__custom-button {
-  display: none;
-  margin-left: 11px;
-}
-.radio-group__custom-button:checked + .radio-group__button::before {
-  background-image: url("../img/buttons/radio-button.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-@media (width <= 919px) {
-  .radio-group__custom-button:checked + .radio-group__button::before {
-    background-image: url("../img/buttons/radio-button-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
 .radio-group__button {
   display: flex;
   align-items: center;
@@ -906,6 +917,22 @@ ul {
     content: "";
   }
 }
+.radio-group__custom-button {
+  display: none;
+  margin-left: 11px;
+}
+.radio-group__custom-button:checked + .radio-group__button::before {
+  background-image: url("../img/buttons/radio-button.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (width <= 919px) {
+  .radio-group__custom-button:checked + .radio-group__button::before {
+    background-image: url("../img/buttons/radio-button-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
 
 .agreements {
   width: 100%;
@@ -916,21 +943,6 @@ ul {
   .agreements {
     display: flex;
     margin-top: 29px;
-  }
-}
-.agreements__custom-button {
-  display: none;
-}
-.agreements__custom-button:checked + .agreements__button::before {
-  background-image: url("../img/buttons/checkbox.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-@media (width <= 919px) {
-  .agreements__custom-button:checked + .agreements__button::before {
-    background-image: url("../img/buttons/checkbox-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 }
 .agreements__button {
@@ -970,6 +982,21 @@ ul {
     margin-bottom: auto;
     content: "";
     border-radius: 4px;
+  }
+}
+.agreements__custom-button {
+  display: none;
+}
+.agreements__custom-button:checked + .agreements__button::before {
+  background-image: url("../img/buttons/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (width <= 919px) {
+  .agreements__custom-button:checked + .agreements__button::before {
+    background-image: url("../img/buttons/checkbox-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 .agreements__contract-reference {
@@ -1016,7 +1043,7 @@ ul {
     width: 133px;
     padding-top: 12;
     padding-bottom: 12px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

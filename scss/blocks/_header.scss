@@ -93,10 +93,6 @@
         color: $white-color;
 
         @include event-selectors {
-            &:hover&::before {
-                width: 100%;
-            }
-            
             &::before {
                 position: absolute;
                 bottom: -3px;
@@ -105,6 +101,10 @@
                 content: '';
                 border-bottom: 1px solid $white-color;
                 transition: all 200ms ease-in;
+            }
+
+            &:hover::before {
+                width: 100%;
             }
         }
     }

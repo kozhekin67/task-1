@@ -5,14 +5,15 @@
     outline: none;
 }
 
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
 html, body {
     width: 100%;
     font-family: Roboto, Arial, sans-serif;
     background-color: $bg-color;
-}
-
-a {
-    text-decoration: none;
+	text-size-adjust: 100%;
 }
 
 button, input, textarea {
@@ -36,7 +37,14 @@ ul{
     }
 }
 
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+img{vertical-align: top;}
    
 #choosing-tour, #questionnaire, #reviews, #travel-stories {
     transition: all 200ms ease-in;
-}
+}   
+
