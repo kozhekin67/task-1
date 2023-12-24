@@ -1,37 +1,41 @@
+const dropdownList = document.querySelector('.dropdown__list');
+const dropdownButton = document.querySelector('.dropdown__button');
 const refund = document.querySelector('.dropdown__refund');
-
 const menu = document.querySelector('.header-block__menu');
 const links = document.querySelectorAll('.site-sections__section-link');
 const linksHover = document.querySelectorAll('.site-sections__section-link');
 const logo = document.querySelector('.your-tur__img');
 const telephone = document.querySelector('.phone-number__reference-number');
 
-document.querySelector('.dropdown__button').addEventListener('click', function () {
-    document.querySelector('.dropdown__list').classList.toggle('dropdown__list_visible');
-});
+const dropdownListVisible = () => {
+    dropdownList.classList.toggle('dropdown__list_visible');
+}
+dropdownButton.addEventListener('click', dropdownListVisible);
 
-document.querySelectorAll('.dropdown__list-item').forEach(function(listItem) {
+const choosingTour = (listItem) => {
     listItem.addEventListener('click', function (event) {
         event.stopPropagation ();
-        document.querySelector('.dropdown__button').innerText = this.innerText;
-        document.querySelector('.dropdown__button').classList.add('dropdown__button_active');
-        document.querySelector('.dropdown__list').classList.remove('dropdown__list_visible');
+        dropdownButton.innerText = this.innerText;
+        dropdownButton.classList.add('dropdown__button_active');
+        dropdownList.classList.remove('dropdown__list_visible');
     })
-});
+};
+document.querySelectorAll('.dropdown__list-item').forEach((listItem) => choosingTour(listItem));
 
-document.addEventListener('click', function (event){
-    if (event.target !== document.querySelector('.dropdown__button')) {
-        document.querySelector('.dropdown__list').classList.remove('dropdown__list_visible');
+const ExitTheDropDownList = (event) => {
+    if (event.target !== dropdownButton) {
+        dropdownList.classList.remove('dropdown__list_visible');
     }
-});
-
-refund.onclick = function() {
-    document.querySelector('.dropdown__button').innerText = innerText = 'Куда хотите ехать';
-    document.querySelector('.dropdown__button').classList.remove('dropdown__button_active');
 }
+document.addEventListener('click', (event) => ExitTheDropDownList(event));
 
-window.onscroll = function showMenu () {
+const resetСhoosingTour = () => {
+    dropdownButton.innerText = 'Куда хотите ехать';
+    dropdownButton.classList.remove('dropdown__button_active');
+}
+refund.onclick = resetСhoosingTour;
 
+const showMenu = () => {
     if (window.pageYOffset > 450) {
         menu.classList.add('header-block__menu_scroll');
         links.forEach((link)=>link.style.color = '#1B1F2B');
@@ -48,9 +52,10 @@ window.onscroll = function showMenu () {
         telephone.classList.remove('phone-number__reference-number_scrool');
     }
 }
+window.onscroll = showMenu;
 
 const sections = document.querySelectorAll('a[href*="#"]')
-for (let section of sections) {
+sections.forEach((section) => {
     section.addEventListener('click', function(event) {
         event.preventDefault();
         const blockID = section.getAttribute('href');
@@ -59,4 +64,4 @@ for (let section of sections) {
             block: "start"
         })
     })
-}
+})

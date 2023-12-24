@@ -1,36 +1,36 @@
 @mixin dekstop {
-    @media (min-width: 920px) and (max-width: 1399px) {
+    @media (width >= 920px) and (width <= 1399px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (max-width: 919px) {
+    @media (width <= 919px) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media (max-width: 530px) {
+    @media (width <= 530px) {
         @content;
     }
 }
 
-@mixin event_selectors {
-    @media (min-width: 920px) {
+@mixin event-selectors {
+    @media (width >= 920px) {
         @content;
     }
 }
 
 @mixin subtitle-style {
-    font-weight: 500;
     font-size: 35px;
+    font-weight: 500;
     line-height: 122%;
 }
 
 @mixin travel-history-text-style {
-    font-weight: 400;
     font-size: 20px;
+    font-weight: 400;
     line-height: 142%;
     color: $white-color;
 }

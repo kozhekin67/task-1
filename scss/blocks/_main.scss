@@ -6,16 +6,16 @@
             padding-top: 75px;
         }
     }
-
+    
     &__email {
         display: flex;
+        gap: 30px;
         align-items: center;
         justify-content: center;
         width: 771px;
         margin-top: 135px;
-        margin-left: auto;
         margin-right: auto;
-        gap: 30px;
+        margin-left: auto;
         word-wrap: break-word;
     
         @include tablet {
@@ -23,8 +23,8 @@
         }
     
         @include mobile {
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
             margin-top: 80px; 
         }
@@ -32,21 +32,20 @@
 }
 
 .section-name {
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 
     @include tablet {
         width: 100%;
     }
 
     &__title {
-        text-align: center;
-        font-weight: 700;
-        text-align: center;
         font-size: 59px;
-        line-height: 124%;
         font-style: normal;
+        font-weight: 700;
+        line-height: 124%;
+        text-align: center;
 
     @include tablet {
         font-size: 34px;
@@ -56,21 +55,21 @@
     }
 
     &__description{
-        text-align: center;
         width: 418px;
         margin-top: 30px;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
         font-size: 20px;
         line-height: 142%;
         color: $grey-color;
+        text-align: center;
     
         @include tablet {
             width: 318px;
-            font-size: 16px;
             margin-top: 20px;
-            margin-left: auto;
             margin-right: auto;
+            margin-left: auto;
+            font-size: 16px;
             text-align: center;
         }
     }
@@ -82,19 +81,19 @@
         justify-content:space-between;
         width: 700px;
         margin-top: 35px;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
 
         @include tablet {
             display: flex; 
             flex-wrap: wrap;
+            gap: 10px;
             justify-content:center;
             width: 100%;
             height: auto;
-            margin-top: 30px;
-            gap: 10px;
-            padding-left: 40px;
             padding-right: 40px;
+            padding-left: 40px;
+            margin-top: 30px;
         }
     }
 
@@ -106,23 +105,23 @@
     
     &__link {
         position: relative;
-        color: $dark-color;
-        font-weight: 700;
         font-size: 23px;
+        font-weight: 700;
+        color: $dark-color;
         transition: all 200ms ease-in;
 
-        @include event_selectors {
-            &:hover::before {
+        @include event-selectors {
+            &:hover&::before {
                 width: 100%;
             }
 
             &::before {
-                content: '';
                 position: absolute;
                 bottom: -8px;
                 left: 0;
                 width: 0%;
                 height: 2px;
+                content: '';
                 background-color: $dark-color;
                 transition: all 200ms ease-in;
             }
@@ -139,19 +138,21 @@
 
         @include tablet {
             font-size: 16px;
+
             &::before {
-                content: '';
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 width: 0%;
                 height: 0%;
+                content: '';
                 background-color: $dark-color;
                 transition: all 200ms ease-in;
             }
+
             &:focus {
-                font-weight: 700;
                 font-size: 16px;
+                font-weight: 700;
                 line-height: 142%;
             }
         }
@@ -161,58 +162,58 @@
 .tour-cards {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 30px;
     justify-content: space-between;
     width: 1170px;
-    row-gap: 30px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 107px;
+    margin-right: auto;
+    margin-left: auto;
 
     @include dekstop {
         display: flex;
         flex-wrap: wrap;
+        gap: 18px;
         width: 89.65%;
         overflow: hidden;
-        gap: 18px;
     }
 
     @include tablet {
         flex-wrap: wrap;
+        gap: 18px;
         justify-content: space-between;
         width: 88.61%;
-        margin-left: auto;
-        margin-right: auto;
         margin-top: 50px;
-        gap: 18px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 .tour-card{
     position:relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 370px;
     height: 531px;
-    border-radius: 50px;
     overflow: hidden;
+    border-radius: 50px;
 
     &::after {
-        content:'';
-    position:absolute;
-    left:0; top:0;
+    position:absolute; top:0;
+    left:0;
     width:100%; 
     height:100%;
+        content:'';
+    background: linear-gradient(360deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 6%) 48.44%, rgb(0 0 0 / 50%) 100%);
     border-radius: 50px;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
     }
 
-    @include event_selectors {
+    @include event-selectors {
         &:hover {
             cursor: pointer;
         }
 
-        &:hover .tour-card__photo{
+        &:hover &__photo{
             transition: all 300ms ease-in;
             transform: scale(1.3);
         }
@@ -232,14 +233,14 @@
         border-radius: 20px;
 
         &::after {
-            content:'';
-            position:absolute;
-            left:0; 
+            position:absolute; 
             top:0;
+            left:0;
             width:100%; 
             height:100%;
+            content:'';
+            background: linear-gradient(360deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 6%) 48.44%, rgb(0 0 0 / 50%) 100%);
             border-radius: 20px;
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
         }
     }
 
@@ -249,25 +250,25 @@
 
     &__photo {
         position: absolute;
-        height: 100%;
-        width: auto; 
+        width: auto;
+        height: 100%; 
         transition: all 300ms ease-in-out;
     }   
 
     &__photo_vertical {
         position: absolute;
-        height: auto;
         width: 100%;
+        height: auto;
     }
 
     &__conntent {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
         width: 100%;
         height: 531px;
         padding: 50px 80px 50px 50px;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
 
         @include dekstop {
             padding: 50px;
@@ -275,17 +276,17 @@
 
         @include tablet{
             height: 318px;
-            padding: 25px 25px 25px 25px;
+            padding: 25px;
         }
     }
 
     &__name {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
         gap: 16px;
+        align-items: flex-start;
         align-self: stretch;
+        justify-content: flex-end;
 
         @include tablet {
             gap: 13px;
@@ -294,13 +295,15 @@
 
     &__subtitle-section {
         z-index: 1;
+
         @include subtitle-style;
+
         font-style: normal;
         color: $white-color;
 
         @include tablet {
-            font-weight: 700;
             font-size: 23px;
+            font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.92px;
         }
@@ -308,11 +311,11 @@
 
     &__cost {
         z-index: 1;
-        font-weight: 400;
         font-size: 17px;
+        font-weight: 400;
         line-height: 142%;
-        letter-spacing: -0.01em;
         color: $white-color;
+        letter-spacing: -0.01em;
 
         @include tablet {
             font-size: 16px;
@@ -322,10 +325,10 @@
     &__detail {
         z-index: 1;
         display: flex;
-        margin-left: -20px;
         margin-bottom: -7px;
-        font-weight: 700;
+        margin-left: -20px;
         font-size: 23px;
+        font-weight: 700;
         color: $white-color;
     }    
 }
@@ -333,15 +336,15 @@
 .questionnaire {
     &__field {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        justify-content: space-between;
         width: 1170px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
         padding: 70px;
-        border-radius: 50px;
+        margin-top: 100px;
+        margin-right: auto;
+        margin-left: auto;
         background: $white-color;
+        border-radius: 50px;
 
         @include dekstop {
             width: 89.65%;
@@ -350,8 +353,8 @@
 
         @include tablet {
             width: 88.33%;
-            margin-top: 40px;
             padding: 20px;
+            margin-top: 40px;
             border-radius: 30px;
         }
     }
@@ -360,8 +363,8 @@
 .data-field {
     width: 500px;
     margin-bottom: 33px;
-    color: $dark-color;
     font-size: 20px;
+    color: $dark-color;
 
     @include dekstop {
         width: 48.75%;
@@ -372,7 +375,6 @@
         margin-top: 4px;
         margin-bottom: 30px;
         font-size: 16px;
-        font-size: 16px;
     }
     
     &__name {
@@ -381,40 +383,40 @@
 
     &__data-entry {
         width: 100%;
-        margin-top: 8px;
         padding: 20px;
-        border: 1px solid $light-grey-color;
-        border-radius: 10px;
-        background: $bg-color;
-        color: $dark-color;
+        margin-top: 8px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 142%;  
+        line-height: 142%;
+        color: $dark-color;
+        background: $bg-color;
+        border: 1px solid $light-grey-color;
+        border-radius: 10px;  
     
         &::placeholder {
-            color: $grey-color;
-            font-family: 'Roboto', 'Arial', sans-serif;
+            font-family: Roboto, Arial, sans-serif;
             font-style: normal;
+            color: $grey-color;
         }
     
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
+                background: $light-grey-color;
                 border: 1px solid $light-grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
     
             &:focus {
+                background: $light-grey-color;
                 border: 1px solid $grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
         }
     
         @include tablet {
-            padding: 10px;
             height: 43px;
+            padding: 10px;
     
             &::placeholder {
                 font-size: 16px;
@@ -427,39 +429,39 @@
     position: relative;
     
     @include tablet {
-        margin-top: 8px;
         padding: 0;
+        margin-top: 8px;
         font-size: 16px;
         line-height: 142%;
     }
 
     &__button {
         width: 100%;
-        margin-top: 8px;
         padding: 20px;
-        border: 1px solid $light-grey-color;
-        border-radius: 10px;
-        font-family: 'Roboto', 'Arial', sans-serif;
+        margin-top: 8px;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
         line-height: 142%; 
         color: $grey-color;
-        background: $bg-color;
-        transition: all 200ms ease-in;
         appearance: none;
+        background: $bg-color;
+        border: 1px solid $light-grey-color;
+        border-radius: 10px;
+        transition: all 200ms ease-in;
 
-        @include  event_selectors {
+        @include  event-selectors {
             &:hover {
+                background: $light-grey-color;
                 border: 1px solid $light-grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
 
             &:active {
+                background: $light-grey-color;
                 border: 1px solid $grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
         }
 
@@ -482,8 +484,8 @@
         right: 20px;
         width: 26px;
         height: 26px;
-        fill: $dark-color;
         pointer-events: none;
+        fill: $dark-color;
 
         @include tablet {
             top: 12px;
@@ -492,17 +494,17 @@
     }
 
     &__list {
-        z-index: 1;
         position: absolute;
+        z-index: 1;
         display: none;
-        text-align: left;
         width: 100%;
+        overflow: hidden;
+        color: $dark-color;
+        text-align: left;
+        list-style-type: none;
+        background: $bg-color;
         border: 1px solid $light-grey-color;
         border-radius: 10px;
-        list-style-type: none;
-        overflow: hidden;
-        background: $bg-color;
-        color: $dark-color;
     }
 
     &__list_visible {
@@ -512,11 +514,11 @@
 
     &__list-item {
         padding: 20px;
-        border-bottom: 1px solid $light-grey-color;
-        border: 1px solid $light-grey-color;
         cursor: pointer;
+        border: 1px solid $light-grey-color;
+        border-bottom: 1px solid $light-grey-color;
 
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
                 background: $light-grey-color;
             }
@@ -531,10 +533,10 @@
 
     &__refund {
         padding: 20px;
-        border-bottom: 1px solid $light-grey-color;
-        border: 1px solid $light-grey-color;
         color: $grey-color;
         cursor: pointer;
+        border: 1px solid $light-grey-color;
+        border-bottom: 1px solid $light-grey-color;
     }
 }
 
@@ -552,28 +554,28 @@
     &__field {
         width: 100%;
         height: 152px;
-        resize: none;
-        margin-top: 8px;
         padding: 1%;
+        margin-top: 8px;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        line-height: 142%;
+        resize: none;
+        background: $bg-color;
         border: 1px solid $light-grey-color;
         border-radius: 10px;
-        background: $bg-color;
-        font-family: 'Roboto', 'Arial', sans-serif;
-        font-style: normal;
-        font-size: 20px;
-        line-height: 142%;
 
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
+                background: $light-grey-color;
                 border: 1px solid $light-grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
 
             &:focus {
+                background: $light-grey-color;
                 border: 1px solid $grey-color;
                 border-radius: 10px;
-                background: $light-grey-color;
             }
         }
 
@@ -609,18 +611,18 @@
     }
 
     &__custom-button {
-        margin-left: 11px;
         display: none;
+        margin-left: 11px;
 
-        &:checked + .radio-group__button::before {
-            background-image: url(../img/buttons/radio-button.svg);
+        &:checked + &__button::before {
+            background-image: url("../img/buttons/radio-button.svg");
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         @include tablet {
-            &:checked + .radio-group__button::before {
-                background-image: url(../img/buttons/radio-button-mobile.svg);
+            &:checked + &__button::before {
+                background-image: url("../img/buttons/radio-button-mobile.svg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
@@ -633,23 +635,23 @@
         justify-content:space-between;
 
         &::before {
-            content: "";
+            box-sizing: border-box;
             display: inline-block;
             width: 26px;
             height: 26px;
             margin-right: 11px;
-            box-sizing: border-box;
+            cursor: pointer;
+            content: "";
             border: 2px solid $dark-color;
             border-radius: 50%;
-            cursor: pointer;
         }
 
         @include tablet {
             &::before {
-                content: "";
                 width: 20px;
                 height: 20px;
                 margin-right: 10px;
+                content: "";
             }
         }
     }
@@ -668,15 +670,15 @@
     &__custom-button {
         display: none;
 
-        &:checked + .agreements__button::before {
-            background-image: url(../img/buttons/checkbox.svg);
+        &:checked + &__button::before {
+            background-image: url("../img/buttons/checkbox.svg");
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         @include tablet {
-            &:checked + .agreements__button::before {
-                background-image: url(../img/buttons/checkbox-mobile.svg);
+            &:checked + &__button::before {
+                background-image: url("../img/buttons/checkbox-mobile.svg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
@@ -688,38 +690,38 @@
         align-items: center;
         font-size: 17px;
         line-height: 142%;
-        letter-spacing: -0.01em;
         color: $grey-color;
+        letter-spacing: -0.01em;
 
         &::before {
-            content: "";
+            box-sizing: border-box;
             display: inline-block;
             width: 26px;
             height: 26px;
             margin-right: 19px;
-            box-sizing: border-box;
+            cursor: pointer;
+            content: "";
             border: 2px solid $dark-color;
             border-radius: 5px;
-            cursor: pointer;
         }
 
         @include dekstop {
             &::before {
-                content: "";
                 margin-right: 11px;
+                content: "";
             }
         }
 
         @include tablet {
             font-size: 16px;
-            letter-spacing: 0em;
+            letter-spacing: 0;
 
             &::before {
-                content: "";
                 min-width: 20px;
                 height: 20px;
-                margin-bottom: auto;
                 margin-right: 10px;
+                margin-bottom: auto;
+                content: "";
                 border-radius: 4px;
             }
         }
@@ -729,16 +731,16 @@
         padding: 0.25em;
         color: $dark-color;
     
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
-                text-decoration: underline;
                 color: black;
+                text-decoration: underline;
                 transition: all 300ms ease-in;
             }
     
             &:active {
-                text-decoration-line: underline;
                 color: $green-color;
+                text-decoration-line: underline;
             }
         }
     }
@@ -753,40 +755,40 @@
     @include tablet {
         flex-wrap: wrap;
         width: 278px;
-        margin-bottom: 10px;
         margin-top: 30px;
+        margin-bottom: 10px;
     }
 
     &__button {
         width: 235px;
         padding-top: 15px;
         padding-bottom: 15px;
-        border: none;
-        border-radius: 10px;
         font-size: 20px;
         line-height: 142%;
+        border: none;
+        border-radius: 10px;
 
         @include tablet {
             width: 133px;
             padding-top: 12;
             padding-bottom: 12px;
+            font-family: Roboto, Arial, sans-serif;
             font-size: 16px;
-            line-height: 142%;
-            font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
+            line-height: 142%;
         }
     }
 
     &__button_search {
-        background-color: $green-color;
         color: $white-color;
         cursor: pointer;
+        background-color: $green-color;
 
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
-                background-color: #3B7E7B;
                 color: $white-color;
+                background-color: #3B7E7B;
             }
 
             &:active {
@@ -801,11 +803,11 @@
     }    
 
     &__button_reset {
-        background-color: $light-green-color;
         color: $green-color;
         cursor: pointer;
+        background-color: $light-green-color;
 
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
                 background-color: #F1F3F2;
             }
@@ -823,8 +825,8 @@
         justify-content: space-between;
         width: 1170px;
         margin-top: 100px;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
 
         @include dekstop {
             width: 89.65%;
@@ -832,9 +834,9 @@
 
         @include tablet {
             flex-wrap: wrap;
+            gap: 18px;
             width: 88.33%;
             margin-top: 50px;
-            gap: 18px;
         }
     }
 }
@@ -845,11 +847,11 @@
     justify-content: space-between;
     width: 570px;
     padding: 40px;
-    border-radius: 50px;
-    background: $light-grey-color;
-    font-weight: 700;
     font-size: 23px;
+    font-weight: 700;
     line-height: 122%;
+    background: $light-grey-color;
+    border-radius: 50px;
 
     @include dekstop {
         width: 49.02%;
@@ -859,10 +861,10 @@
         width: 100%;
         padding: 20px;
         padding-top: 0;
-        padding-right: 0px;
-        border-radius: 20px;
+        padding-right: 0;
         font-size: 16px;
         line-height: 144%;
+        border-radius: 20px;
     }
     
     &__text {
@@ -875,14 +877,14 @@
 
     &__user-block {
         display: flex;
-        justify-content: space-between;
         align-items: flex-end;
+        justify-content: space-between;
         width: 100%;
         height: 145px;
 
         @include tablet {
-            height: 115px;
             width: 100%;
+            height: 115px;
             padding-right: 20px;
         }
     }
@@ -900,21 +902,21 @@
 
 
     &__photo {
-        height: 75px;
         width: 75px;
+        height: 75px;
         border-radius: 50%;
     }
 
     &__tour-name {
-        font-weight: 400;
         font-size: 17px;
+        font-weight: 400;
         line-height: 142%;
-        letter-spacing: -0.01em;
         color: $grey-color;
+        letter-spacing: -0.01em;
 
         @include tablet {
             width: 100%;
-            margin-top: 0px;
+            margin-top: 0;
             font-size: 16px;
         }
     }
@@ -924,15 +926,15 @@
     &__container {
         display: flex;
         flex-direction:column;
+        row-gap: 30px;
         width: 100%;
         margin-top: 100px;
-        margin-left: auto;
         margin-right: auto;
-        row-gap: 30px;
+        margin-left: auto;
 
         @include tablet {
-            margin-top: 50px;
             row-gap: 18px;
+            margin-top: 50px;
         }
     }
 }
@@ -941,8 +943,8 @@
     display: grid;
     grid-template-rows: 300px;
     justify-content: space-between;
-    padding-left: 1.56%;
     padding-right: 1.56%;
+    padding-left: 1.56%;
 
     &:nth-child(1) {
         grid-template-columns: repeat(4, 23.79%);
@@ -982,13 +984,13 @@
 
     @include dekstop {
         column-gap: 20px;
-        padding-left: 1.95%;
         padding-right: 1.95%;
+        padding-left: 1.95%;
     }
 
     @include tablet {
-        padding-left: 5.83%;
         padding-right: 5.83%;
+        padding-left: 5.83%;
     }
 
     @include mobile {
@@ -1047,31 +1049,31 @@
 .travel-history {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 1170px;
     height: 567px;
-    margin-left: auto;
     margin-right: auto;
-    border-radius: 50px;
+    margin-left: auto;
     overflow: hidden;
+    border-radius: 50px;
 
     &::after {
-        content:'';
         position:absolute;
         top: 0;
         left: 0;
         width:100%; 
         height:100%;
+        content:'';
+        background: linear-gradient(270deg, rgb(0 0 0 / 0%) 0.01%, rgb(0 0 0 / 20%) 100%);
         border-radius: 50px;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(0, 0, 0, 0.20) 100%);
     }
 
     &:not(:first-child) {
         margin-top: 50px;
     }
 
-    @include event_selectors {
+    @include event-selectors {
         &:hover {
             cursor: pointer;
         }
@@ -1094,7 +1096,6 @@
         display: flex;
         justify-content: center;
         width: 88.33%;
-        height: 500px;
         height: 455px;
         border-radius: 20px;
 
@@ -1116,9 +1117,9 @@
         transition: all 300ms ease-in-out;
 
         @include tablet {
-            border-radius: 20px;
             width: 100%;
             height: 100%;
+            border-radius: 20px;
         }
     }
 
@@ -1128,37 +1129,34 @@
         justify-content: space-between;
         width: 100%;
         height: 567px;
-        padding: 60px 60px 50px 60px;
+        padding: 60px 60px 50px;
     
         @include tablet {
             height: 455px;
-            padding: 30px 30px 22px 30px;
+            padding: 30px 30px 22px;
         }
     }
 
     &__name {
         display: flex;
         flex-direction: column;
+        flex-shrink: 0;
         align-items: flex-start;
         justify-content: flex-start;
-        //gap: 37px;
-        flex-shrink: 0;
-    
-        //@include tablet {
-            //gap: 20px;
-       // }
     }
 
     &__subtitle-section {
         z-index: 1;
+
         @include subtitle-style;
+
         font-style: normal;
         color: $white-color;
     
         @include tablet {
             width: 50%;
-            font-weight: 700;
             font-size: 23px;
+            font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.04em;
         }
@@ -1168,13 +1166,14 @@
         z-index: 1;
         width: 555px;
         margin-top: 38px;
+
         @include travel-history-text-style;
 
         @include tablet {
             width: 100%;
             margin-top: 20px;
-            font-weight: 400;
             font-size: 16px;
+            font-weight: 400;
             line-height: 145%;
             color: $white-color;
         }
@@ -1183,48 +1182,49 @@
     &__advantages{
         z-index: 1;
         margin-top: 30px;
+
         @include travel-history-text-style;
     
         @include tablet {
             width: 100%;
             margin-top: 22px;
-            font-weight: 400;
             font-size: 16px;
+            font-weight: 400;
             line-height: 145%;
             color: $white-color;
         }
     }
 
     &__advantage {
-        list-style: none;
         font-size: 20px;
+        list-style: none;
     
         &::before {
-            content:"·";
-            vertical-align:text-top;
             padding: 0.35em;
             font-size: 30px;
             line-height: 20px;
+            vertical-align:text-top;
+            content:"·";
         }
     
         @include tablet {
             font-size: 16px;
     
             &::before {
-                content:"·";
-                vertical-align:text-top;
                 padding: 0.55em;
                 font-size: 16px;
                 line-height:20px;
+                vertical-align:text-top;
+                content:"·";
             }
         }
     }
 
     &__bottom {
         display: flex;
-        width: 100%;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &__detail {
@@ -1235,28 +1235,30 @@
     &__links-social-networks {
         z-index: 1;
         display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 35px;
+        align-items: center;
+        justify-content: center;
+
         @include tablet {
             display: none;
         }
     }
 
     &__social-network-link {
-        z-index: 1;
         position: relative;
+        z-index: 1;
         font-style: normal;
-        @include travel-history-text-style;
         transition: all 200ms ease-in;
+
+        @include travel-history-text-style;
     
-        @include event_selectors {
+        @include event-selectors {
             &::before {
-                content: '';
                 position: absolute;
-                left: 0;
                 bottom: -2px;
+                left: 0;
                 width: 0;
+                content: '';
                 border-bottom: 1px solid $white-color;
                 transition: all 200ms ease-in;
             }
@@ -1280,19 +1282,19 @@
 .main-block .detailed-button {
     z-index: 1;
     display: flex;
+    gap: 15px;
     align-items: center;
     padding: 7px 20px;
-    gap: 15px;
-    border-radius: 50px;
-    border: none;
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-weight: 700;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 23px;
+    font-weight: 700;
     line-height: 122%;
-    background-color: transparent;
     color: $white-color;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
 
-    @include event_selectors {
+    @include event-selectors {
         &:active {  
             background-color: $orange-color;
         }
@@ -1325,20 +1327,20 @@
     &__feedback {
         display: flex;
         flex-direction: column;
+        gap: 20px;
         align-items: flex-start;
         width: 371px;
-        gap: 20px;
     
         @include tablet {
             width: 48.12%;
         }
     
         @include mobile {
-            text-align: center;
             width: 88.33%;
-            margin-left: auto;
+            margin-top: 0;
             margin-right: auto;
-            margin-top: 0px;
+            margin-left: auto;
+            text-align: center;
         }
     }
 
@@ -1352,49 +1354,49 @@
         }
 
         @include mobile {
-            margin-bottom: 0px;
-            margin-left: auto;
             margin-right: auto;
-            letter-spacing: 0.04em;
+            margin-bottom: 0;
+            margin-left: auto;
             font-weight: 700;
             line-height: 120%;
+            letter-spacing: 0.04em;
         }
     }
 
     &__text {
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
         line-height: 142%;
         color: $grey-color;
     
         @include mobile {
             width: 95%;
-            margin-left: auto;
+            margin-top: 0;
             margin-right: auto;
-            margin-top: 0px;
+            margin-left: auto;
             font-size: 16px;
             line-height: 142%;
         }
     }
 
     &__link {
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
         line-height: 142%;
         color: $dark-color;
     
-        @include event_selectors {
+        @include event-selectors {
             &:hover {
-                text-decoration: underline;
                 color: black;
+                text-decoration: underline;
                 transition: all 300ms ease-in;
             }
     
             &:active{
-                text-decoration-line: underline;
                 color: $green-color;
+                text-decoration-line: underline;
             }
         }
     
@@ -1404,4 +1406,3 @@
         }
     }
 }
-
