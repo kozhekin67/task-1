@@ -922,94 +922,70 @@
     }
 }
 
-.travel-photos {
-    &__container {
-        display: flex;
-        flex-direction:column;
-        row-gap: 30px;
-        width: 100%;
-        margin-top: 100px;
-        margin-right: auto;
-        margin-left: auto;
-
-        @include tablet {
-            row-gap: 18px;
-            margin-top: 50px;
-        }
-    }
-}
-
-.row-photos {
+.container-photos {
     display: grid;
-    grid-template-rows: 300px;
-    justify-content: space-between;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 1.56%;
     padding-left: 1.56%;
+    row-gap: 30px;
+    column-gap: 30px;
 
-    &:nth-child(1) {
-        grid-template-columns: repeat(4, 23.79%);
-
-        @include dekstop {
-            grid-template-columns: repeat(3, 31.98%);
-        }
-
-        @include tablet {
-            grid-template-columns: repeat(2, 47.18%);
-        }
-    }
-
-    &:nth-child(2) {
-        grid-template-columns: repeat(5, 18.77%);
-
-        @include dekstop {
-            grid-template-columns: repeat(4, 23.48%);
-        }
-
-        @include tablet {
-            grid-template-columns: repeat(3, 31.24%);
-        }
-    }
-
-    &:nth-child(3) {
-        grid-template-columns: repeat(4, 23.79%);
-
-        @include dekstop {
-            grid-template-columns: repeat(3, 31.98%);
-        }
-
-        @include tablet {
-            grid-template-columns: repeat(2, 48.43%);
-        }
-    }
-
-    @include dekstop {
+    @include dekstop{
+        grid-template-columns: repeat(12, 1fr);
+        row-gap: 30px;
         column-gap: 20px;
         padding-right: 1.95%;
         padding-left: 1.95%;
     }
 
     @include tablet {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 18px;
+        column-gap: 10px;
+        margin-top: 50px;
         padding-right: 5.83%;
         padding-left: 5.83%;
     }
 
     @include mobile {
-        grid-template-rows: 110px;
+        grid-template-rows: repeat(3, 110px);
     }
 
-    &__travel-photo{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        border-radius: 50px;
+    &__row_first,  &__row_third {
+        grid-column: auto / span 5;
         
+        @include dekstop {
+            grid-column: auto / span 4;
+        }
+
         @include tablet {
-            border-radius: 20px;
+            grid-column: auto / span 3;
         }
     }
 
-    &__first-row:nth-child(2), &__third-row:nth-child(4), &__second-row:nth-child(3) {
+    &__row_second {
+        grid-column: auto / span 4;
+
+        @include dekstop {
+            grid-column: auto / span 3;
+        }
+
+        @include tablet {
+            grid-column: auto / span 2;
+        }
+    }
+
+    &__row_first {
+        @include mobile {
+            width: 97.5%;
+        }
+    }
+
+    &__row:nth-child(2), &__row:nth-child(7), &__row:nth-child(13) {
         @include dekstop {
             display: none;
         }
@@ -1018,14 +994,32 @@
             display: none;
         }  
     }
-    
-    &__first-row:nth-child(3), &__third-row:nth-child(3), &__second-row:nth-child(2) {
+
+    &__row:nth-child(3), &__row:nth-child(6), &__row:nth-child(12) {
         @include tablet {
             display: none;
         }
     }
 
-    &__first-row:not(:nth-child(3)) &__travel-photo {
+    &__row:nth-child(4) {
+        @include mobile {
+            justify-self: end;
+        }
+    }
+
+    &__travel-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 50px;
+
+        @include tablet {
+            border-radius: 20px;
+        }
+    }
+
+    &__row_first:not(:nth-child(3)) &__travel-photo {
         @include dekstop {
             object-fit:fill;
         }
