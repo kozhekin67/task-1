@@ -198,10 +198,10 @@
         height: 38px;
         font-size: 17px;
         text-align: center;
-        cursor: pointer;
         background-color: $white-color;
         border: none;
         border-radius: 10px;
+        transition: color 300ms ease-in, background-color 300ms ease-in;
 
         @include event_selectors {
             &:hover {

@@ -108,7 +108,7 @@
         font-size: 23px;
         font-weight: 700;
         color: $dark-color;
-        transition: all 200ms ease-in;
+        transition: color 200ms ease-in;
 
         @include event-selectors {
             &::before {
@@ -214,7 +214,6 @@
         }
 
         &:hover &__photo{
-            transition: all 300ms ease-in;
             transform: scale(1.3);
         }
 
@@ -252,7 +251,7 @@
         position: absolute;
         width: auto;
         height: 100%; 
-        transition: all 300ms ease-in-out;
+        transition: transform 300ms ease-in-out;
     }   
 
     &__photo_vertical {
@@ -393,6 +392,7 @@
         background: $bg-color;
         border: 1px solid $light-grey-color;
         border-radius: 10px;  
+        transition: border 300ms ease-in, background-color 300ms ease-in;
     
         &::placeholder {
             font-family: Roboto, Arial, sans-serif;
@@ -449,9 +449,9 @@
         background: $bg-color;
         border: 1px solid $light-grey-color;
         border-radius: 10px;
-        transition: all 200ms ease-in;
+        transition: border 300ms ease-in, background-color 300ms ease-in;
 
-        @include  event-selectors {
+        @include event-selectors {
             &:hover {
                 background: $light-grey-color;
                 border: 1px solid $light-grey-color;
@@ -564,6 +564,7 @@
         background: $bg-color;
         border: 1px solid $light-grey-color;
         border-radius: 10px;
+        transition: border 300ms ease-in, background-color 300ms ease-in;
 
         @include event-selectors {
             &:hover {
@@ -730,12 +731,12 @@
     &__contract-reference{
         padding: 0.25em;
         color: $dark-color;
+        transition: color 200ms ease-in;
     
         @include event-selectors {
             &:hover {
                 color: black;
                 text-decoration: underline;
-                transition: all 300ms ease-in;
             }
     
             &:active {
@@ -782,8 +783,8 @@
 
     &__button_search {
         color: $white-color;
-        cursor: pointer;
         background-color: $green-color;
+        transition: background-color 300ms ease-in;
 
         @include event-selectors {
             &:hover {
@@ -804,8 +805,8 @@
 
     &__button_reset {
         color: $green-color;
-        cursor: pointer;
         background-color: $light-green-color;
+        transition: background-color 300ms ease-in;
 
         @include event-selectors {
             &:hover {
@@ -924,31 +925,28 @@
 
 .container-photos {
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(20, 1fr);
+    gap: 30px 30px;
+    padding-right: 1.56%;
+    padding-left: 1.56%;
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 1.56%;
-    padding-left: 1.56%;
-    row-gap: 30px;
-    column-gap: 30px;
 
     @include dekstop{
         grid-template-columns: repeat(12, 1fr);
-        row-gap: 30px;
-        column-gap: 20px;
+        gap: 30px 20px;
         padding-right: 1.95%;
         padding-left: 1.95%;
     }
 
     @include tablet {
         grid-template-columns: repeat(6, 1fr);
-        row-gap: 18px;
-        column-gap: 10px;
-        margin-top: 50px;
+        gap: 18px 10px;
         padding-right: 5.83%;
         padding-left: 5.83%;
+        margin-top: 50px;
     }
 
     @include mobile {
@@ -1077,7 +1075,6 @@
         }
 
         &:hover &__foto{
-            transition: all 300ms ease-in;
             transform: scale(1.2);
         }
     }
@@ -1108,7 +1105,7 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        transition: all 300ms ease-in-out;
+        transition: transform 300ms ease-in-out;
 
         @include tablet {
             width: 100%;
@@ -1242,7 +1239,7 @@
         position: relative;
         z-index: 1;
         font-style: normal;
-        transition: all 200ms ease-in;
+        transition: color 200ms ease-in;
 
         @include travel-history-text-style;
     
@@ -1287,6 +1284,7 @@
     background-color: transparent;
     border: none;
     border-radius: 50px;
+    transition: background-color 300ms ease-in;
 
     @include event-selectors {
         &:active {  
@@ -1380,12 +1378,12 @@
         font-weight: 400;
         line-height: 142%;
         color: $dark-color;
+        transition: color 300ms ease-in;
     
         @include event-selectors {
             &:hover {
                 color: black;
                 text-decoration: underline;
-                transition: all 300ms ease-in;
             }
     
             &:active{

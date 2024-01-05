@@ -18,7 +18,6 @@ html, body {
 
 button, input, textarea {
     cursor: pointer;
-    transition: all 300ms ease-in;
 }
 
 ul{
@@ -42,9 +41,5 @@ button{cursor: pointer;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style-type: none;}
-img{vertical-align: top;}
-   
-#choosing-tour, #questionnaire, #reviews, #travel-stories {
-    transition: all 200ms ease-in;
-}   
+img{vertical-align: top;} 
 
