@@ -108,27 +108,28 @@
         font-size: 23px;
         font-weight: 700;
         color: $dark-color;
-        transition: color 200ms ease-in;
+        transition: color 300ms ease-in;
 
         @include event-selectors {
             &::before {
                 position: absolute;
                 bottom: -8px;
                 left: 0;
-                width: 0%;
+                width: 100%;
                 height: 2px;
                 content: '';
                 background-color: $dark-color;
-                transition: all 200ms ease-in;
+                transition: transform 300ms ease-in, background-color 300ms ease-in;
+                transform: scale(0, 1);
             }
 
             &:hover::before {
-                width: 100%;
+                transform: scale(1, 1);
             }
 
             &:focus::before {
-                width: 100%;
                 background-color: $orange-color;
+                transform: scale(1, 1);
             }
 
             &:focus{
@@ -147,7 +148,7 @@
                 height: 0%;
                 content: '';
                 background-color: $dark-color;
-                transition: all 200ms ease-in;
+                transition: all 300ms ease-in;
             }
 
             &:focus {
@@ -731,7 +732,7 @@
     &__contract-reference{
         padding: 0.25em;
         color: $dark-color;
-        transition: color 200ms ease-in;
+        transition: color 300ms ease-in;
     
         @include event-selectors {
             &:hover {
@@ -1239,7 +1240,7 @@
         position: relative;
         z-index: 1;
         font-style: normal;
-        transition: color 200ms ease-in;
+        transition: color 300ms ease-in;
 
         @include travel-history-text-style;
     
@@ -1248,14 +1249,15 @@
                 position: absolute;
                 bottom: -2px;
                 left: 0;
-                width: 0;
+                width: 100%;
                 content: '';
                 border-bottom: 1px solid $white-color;
-                transition: all 200ms ease-in;
+                transition: transform 300ms ease-in, border-bottom 300ms ease-in;
+                transform: scale(0);
             }
     
             &:hover::before {
-                width: 100%;
+                transform: scale(1);
             }
     
             &:active {
@@ -1263,7 +1265,6 @@
             }
     
             &:active::before {
-                width: 100%;
                 border-color: $orange-color;
             }
         }

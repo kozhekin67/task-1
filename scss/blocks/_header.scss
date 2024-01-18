@@ -97,14 +97,15 @@
                 position: absolute;
                 bottom: -3px;
                 left: 0;
-                width: 0%;
+                width: 100%;
                 content: '';
                 border-bottom: 1px solid $white-color;
-                transition: all 200ms ease-in;
+                transition: transform 300ms ease-in;
+                transform: scale(0);
             }
 
             &:hover::before {
-                width: 100%;
+                transform: scale(1);
             }
         }
     }
